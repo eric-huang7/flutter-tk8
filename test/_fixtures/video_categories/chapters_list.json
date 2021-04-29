@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "title": "Der mit dem Ball tanzt",
+      "description": "subtitle",
+      "id": "ccbb63c0-a8cd-47b7-8445-5d85e9c80977",
+      "preview_image_url": "https://placekitten.com/400/300",
+      "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+    }
+  ],
+  "pagination": { "cursor": "2012-04-23T18:25:43.511Z", "next_cursor": "2012-05-12T17:33:12.837Z" }
+}

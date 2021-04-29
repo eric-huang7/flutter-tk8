@@ -1,0 +1,153 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+XCODE_PROJ = "./Runner.xcodeproj"
+
+BUILD_INFO = {
+  dev: {
+    xcode_scheme: "dev",
+    appcenter_name: "TK8-Development"
+  },
+  staging: {
+    xcode_scheme: "staging",
+    appcenter_name: "TK8-Staging"
+  }
+}
+
+RELEASE_NOTES = begin
+  File.read("./notes.md")
+rescue
+  UI.message("There are no release notes provided. Using no release notes message.")
+  "There are no release notes provided"
+end
+
+BEFOREALL_EXCLUDE_LANES = [
+  :generate_push_debug_app,
+  :generate_push_staging_apps
+]
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do |lane|
+    next if BEFOREALL_EXCLUDE_LANES.include?(lane)
+    cocoapods
+  end
+
+  def commit_new_build_number
+    commit_version_bump(
+      message: "Fastlane iOS: Incremented build number to #{lane_context[SharedValues::BUILD_NUMBER]}",
+      xcodeproj: XCODE_PROJ,
+      force: true
+    )
+  end
+
+  private_lane :build_flutter do |options|
+    # puts "Building Flutter app (version code: #{build_number}) with flavor '#{options[:flavor]}'"
+    Dir.chdir "../.." do
+      sh("flutter", "packages", "get")
+      sh("flutter", "clean")
+      sh("flutter", "build", "ios", "--no-codesign", "--release", "--flavor", "#{options[:flavor]}", "--dart-define", "BUILD_TYPE=#{options[:flavor]}")
+    end
+  end
+
+  def do_build(build_type:)
+    # setup
+    build_info = BUILD_INFO[build_type]
+
+    app_identifier = "com.njiuko.tk8.#{build_type}"
+    scheme = build_info[:xcode_scheme]
+    output_name = "tk8-#{build_type}-release"
+
+    # setup certificates
+    match(
+      type: "enterprise",
+      app_identifier: app_identifier,
+    )
+
+    # build app
+    build_flutter(
+      flavor: build_type,
+    )
+    build_app(
+      scheme: scheme,
+      workspace: "./Runner.xcworkspace",
+      output_directory: "./build",
+      output_name: output_name
+    )
+
+    # upload symbols for crashlytics
+    upload_symbols_to_crashlytics(
+      dsym_path: "./build/#{output_name}.app.dSYM.zip",
+      gsp_path: "./GoogleService-Info.plist"
+    )
+
+    # upload to app center
+    ipa_path = "./build/#{output_name}.ipa"
+    appcenter_upload(
+      api_token: "1b39cde45fc2d9587df839577ac50d00e6d0723b",
+      owner_name: "operations-dhbf",
+      app_name: build_info[:appcenter_name],
+      file: ipa_path,
+      release_notes: RELEASE_NOTES,
+      notify_testers: true,
+      destinations: "*",
+      destination_type: "group"
+    )
+
+    # clean up
+    clean_build_artifacts
+  end
+
+  desc "Upload a new Development build to AppCenter"
+  lane :development do
+    increment_build_number
+    do_build(build_type: :dev)
+    commit_new_build_number
+  end
+
+  desc "Upload a new Staging build to AppCenter"
+  lane :staging do
+    do_build(build_type: :staging)
+  end
+
+  desc "Update debug push notification certificate"
+  lane :generate_push_debug_app do
+    pem(
+      team_id: "YUQHEPRMAS",
+      development: true,
+      app_identifier: "com.njiuko.tk8.debug",
+      output_path: "./certificates/push/com.njiuko.tk8.debug",
+      p12_password: "NjiukoDoesSoftware123"
+    )
+  end
+
+  desc "Update push notification certificates for apps in AppCenter"
+  lane :generate_push_appcenter_apps do
+    app_ids = [
+      "com.njiuko.tk8.dev",
+      "com.njiuko.tk8.staging",
+    ]
+
+    app_ids.each do |app_id|
+      pem(
+        app_identifier: app_id,
+        output_path: "./certificates/push/#{app_id}",
+        p12_password: "NjiukoDoesSoftware123"
+      )
+    end
+  end
+end

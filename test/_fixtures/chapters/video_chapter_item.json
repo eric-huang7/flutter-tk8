@@ -1,0 +1,16 @@
+{
+  "type": "video",
+  "attributes": {
+    "video": {
+      "id": "abcde-1",
+      "preview_image_url": "https://placekitten.com/400/300",
+      "runtime_seconds": 123,
+      "title": "video 1",
+      "subtitle": "video 1 subtitle",
+      "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov",
+      "current_user": {
+        "favorite": false
+      }
+    }
+  }
+}

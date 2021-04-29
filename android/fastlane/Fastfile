@@ -1,0 +1,106 @@
+
+APP_PROJECT_DIR = "**/app"
+
+RELEASE_NOTES = begin
+  File.read("./notes.md")
+rescue
+  UI.message("There are no release notes provided. Using no release notes message.")
+  "There are no release notes provided"
+end
+
+BUILD_INFO = {
+  dev: {
+    appcenter_name: "TK8-Development-1"
+  },
+  staging: {
+    appcenter_name: "TK8-Staging-1"
+  }
+}
+
+default_platform(:android)
+
+platform :android do
+
+  def increment_build_number
+    increment_version_code(
+      app_project_dir: APP_PROJECT_DIR,
+    )
+  end
+
+  def commit_new_build_number
+    version_code = get_version_code(
+    app_project_dir: APP_PROJECT_DIR,
+  )
+    git_commit(
+      path: "./app/build.gradle",
+      message: "Fastlane Android: Incremented build number to #{version_code}"
+    )
+  end
+
+  def do_build(flavor:)
+
+    # build app
+    build_flutter(flavor: flavor)
+
+    # upload app center
+    app_info = BUILD_INFO[flavor]
+    apk_name = "app-#{flavor}-release.apk"
+    apk_file = "../build/app/outputs/apk/#{flavor}/release/#{apk_name}"
+    appcenter_upload(
+      api_token: "1b39cde45fc2d9587df839577ac50d00e6d0723b",
+      owner_name: "operations-dhbf",
+      app_name: app_info[:appcenter_name],
+      file: apk_file,
+      release_notes: RELEASE_NOTES,
+      notify_testers: true,
+      destinations: "*",
+      destination_type: "group"
+    )
+
+  end
+
+  private_lane :build_flutter do |options|
+    Dir.chdir "../.." do
+      sh("flutter", "packages", "get")
+      sh("flutter", "clean")
+      sh("flutter", "build", "apk", "--flavor", "#{options[:flavor]}", "--dart-define=BUILD_TYPE=#{options[:flavor]}")
+    end
+  end
+
+  desc "Upload a new Development build to AppCenter"
+  lane :development do
+    increment_build_number
+    do_build(flavor: :dev)
+    commit_new_build_number
+  end
+
+  desc "Upload a new Staging build to AppCenter"
+  lane :staging do
+    do_build(flavor: :staging)
+  end
+
+  desc "Submit a new build to the Play Store Internal track"
+  lane :playstore do
+
+    sh("flutter", "packages", "get")
+    sh("flutter", "clean")
+    #We either need to build .apk or .aab so in the future we can remove one of both lines
+    #builds the .apk archive
+    sh("flutter", "build", "apk", "--flavor", "store", "--dart-define=BUILD_TYPE=store")
+    #builds the .aab archive
+    sh("flutter", "build", "appbundle", "--flavor", "store", "--dart-define=BUILD_TYPE=store")
+
+    #There are some unknowns here like for example we need to get the json key and we need to know if we want to upload an .apk or .aab
+    upload_to_play_store(
+      package_name: 'com.njiuko.tk8',
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_metadata: true,
+      skip_upload_apk: true,
+      aab: './app/build/outputs/bundle/storeRelease/app.aab',
+      json_key: 'fastlane/tk8_playstore_fastlane_key.json', #Not yet provided
+      track: 'internal',
+      release_status: 'draft',
+    )
+  end
+end

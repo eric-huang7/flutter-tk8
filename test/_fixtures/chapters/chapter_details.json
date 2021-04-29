@@ -1,0 +1,274 @@
+{
+  "title": "Der mit dem Ball tanzt",
+  "id": "cde11d03-6d76-4b9c-b17d-86480d2becae",
+  "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=111c75bdb67b0bb0743ccb9aa879ccebd41010206cc6a0604f676f4bd296c7d0",
+  "description": null,
+  "trailer": {
+    "id": "ef049da9-ec6c-421c-b0d5-ed915df2c1a4",
+    "created_at": "2021-03-17T14:02:20.442139Z",
+    "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/chapter-trailer-preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=a14eb165c444ed861825ae4a6c5cba7804d0c65a043c99e4e51818e9fc6aeea2",
+    "runtime_seconds": 123,
+    "title": "Trailer",
+    "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/chapter-trailer.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9fd8687e9a1c1f31f38679914ec224b9294d712956a6006d4f99c061c836d39c",
+    "current_user": {
+      "rating": null,
+      "favorite": false,
+      "view": {
+        "watched_seconds": null,
+        "completed": false
+      }
+    }
+  },
+  "user_videos": [
+    {
+      "id": "354fd923-9df7-4b6c-b62e-74951e36a35a",
+      "created_at": "2021-03-17T11:41:36.622599Z",
+      "runtime_seconds": 11,
+      "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/user_videos/cde11d03-6d76-4b9c-b17d-86480d2becae/fb3c1994-d031-4d2e-a233-cf572bcc0229.MOV",
+      "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/profile_images/354fd923-9df7-4b6c-b62e-74951e36a35a/preview_preview_image.jpeg?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=a582a75a0f1ac4a6bef8cc88c8ef7f034724a70517350573c2d6c4a8276973a2",
+      "feedback": null
+    }
+  ],
+  "chapter_items": [
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "created_at": "2020-11-26T10:49:33.876026Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=111c75bdb67b0bb0743ccb9aa879ccebd41010206cc6a0604f676f4bd296c7d0",
+          "runtime_seconds": 123,
+          "title": "Trailer",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer.mov?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c173b5422a931e4d696fa784b2f6ce86c02a3a2ab32e771ce3c5f8999bc288e4",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": 25,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "870bd599-ef8f-4ebe-82f8-a65078d12d51",
+          "created_at": "2020-11-26T10:49:33.881226Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/koerpertaeuschung.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9ccd0e0e983ffda6a9a35c5c882cac4014c4777fb47617b8f1b465391a7ffdc7",
+          "runtime_seconds": 2191,
+          "title": "Körpertäuschung",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip1_Koerpertaeuschung.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=ae61eb68b641ee2269c9a9a6d6e0c09f4766caaa9f7235d3919dd01f72060ba8",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": 3,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    },
+    {
+      "type": "question",
+      "attributes": {
+        "id": "8099767c-4961-4ba4-a3d3-cd8c4467d2b0",
+        "description": "Was muss man machen, um Deinen Flanke als Bananenkurve zu schiessen?",
+        "type": "multiple_choice_question",
+        "answers": [
+          {
+            "id": "21e85988-b09f-4afc-9840-6749f29912b4",
+            "description": "Unterschneide Deine Flanke",
+            "is_correct": false
+          },
+          {
+            "id": "884d36c1-ce92-4a69-9b83-ec2e5e7481c4",
+            "description": "Schiesse die Flanke mit der Picke",
+            "is_correct": false
+          },
+          {
+            "id": "b27f103b-83ef-4e85-98fa-faa02a405ab6",
+            "description": "Flanke mit dem Aussenriss",
+            "is_correct": true
+          },
+          {
+            "id": "07cba68d-8a6f-41fe-8341-c82f406bb058",
+            "description": "Flanke mit dem Spann",
+            "is_correct": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "f4bd69b4-ff86-40b4-a0b6-9789aa87a97d",
+          "created_at": "2020-11-26T10:49:33.883696Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=b8e55850b6207fdb2fa9af0bd3c03c2afb33f5e7c3bf6e9a428afe9f9ed0a925",
+          "runtime_seconds": 24,
+          "title": "RechtsLinksKombination",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination.mov?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=3a800acc89780d78a5d94bb77b0474925c206fc6e2cbbc0a46a2dd53fb22d3d0",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": 33,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "e160dd58-7689-4432-81f3-52e202532995",
+          "created_at": "2020-11-26T10:49:33.885976Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip3_MitKoepfchenSpielen_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=5c5744cd77dd0476fe77f6d54ce9fae8c2640166131703fdff4238ab63da3e1b",
+          "runtime_seconds": 24,
+          "title": "Mit Köpfchen Spielen",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip3_MitKoepfchenSpielen.mov?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=2e8667dbefac60d61ce7ce1e3ecfb4bd010a2de4a16df7b14b07aa26094dc2fa",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": null,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    },
+    {
+      "type": "question",
+      "attributes": {
+        "id": "7fa09e86-a729-4d37-a71e-1ee52173f13e",
+        "description": "Mit welcher Seite geht Toni im Video am Trainingshütchen vorbei?",
+        "type": "multiple_choice_question",
+        "answers": [
+          {
+            "id": "9f1f1102-cb3b-4daa-86c3-03f451f4006c",
+            "description": "links, mit seinem linken Fuss",
+            "is_correct": true
+          },
+          {
+            "id": "e8516717-0eb9-4ab8-87cc-5c68d5de8d44",
+            "description": "rechts, mit seinem rechten Fuss",
+            "is_correct": false
+          },
+          {
+            "id": "e01adf98-7326-41d1-9670-7ec003573e1a",
+            "description": "rechts, mit seinem linken Fuss",
+            "is_correct": false
+          },
+          {
+            "id": "6b9134e0-d0ed-4472-9adc-ff6c7597b592",
+            "description": "links, mit seinem rechten Fuss",
+            "is_correct": false
+          }
+        ]
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "8f773b74-d1c3-47dd-a0e0-4ecc00e68ee5",
+          "created_at": "2020-11-26T10:49:33.889305Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip4_Finte_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=948e9277bad7b32ec269ae9fa64f22cbac7fae4b9d88d74601c46c038150750d",
+          "runtime_seconds": 24,
+          "title": "Finte",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip4_Finte.mov?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9de6b0639524ab5c629e225dedea4b121fe04a7c5c2b24feef397961e2fdb863",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": null,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "video": {
+          "id": "8da7933b-2200-4fda-95b0-6634dcd97da7",
+          "created_at": "2020-11-26T10:49:33.891734Z",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip5_Gesamteuebung_preview.png?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=704067865acdaa78c5c381c268357e64e723ebae22dce21c238a9c850022feb0",
+          "runtime_seconds": 24,
+          "title": "Gesamte Übung",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip5_Gesamteuebung.mov?X-Amz-Expires=3600\u0026X-Amz-Date=20210319T102727Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210319%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c047304d60e70aec8850561148f17a7482df33b0f48da3135771bc6d8ce77354",
+          "current_user": {
+            "rating": null,
+            "favorite": false,
+            "view": {
+              "watched_seconds": null,
+              "completed": false
+            }
+          }
+        },
+        "exercise": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "title": "exercise title",
+          "duration_seconds": 42,
+          "description": "exercise description",
+          "image": {
+            "preview_image_url": "https://loremflickr.com/300/300"
+          }
+        }
+      }
+    }
+  ]
+}

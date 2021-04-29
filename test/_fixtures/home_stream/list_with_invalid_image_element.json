@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "type": "image",
+      "attributes": {
+        "id": "ccbb63c0-a8cd-47b7-8445-5d85e9c80977",
+        "preview_image_url": "https://dummyimage.com/600x400/000/fff.jpg&text=PreviewImage",
+        "image_url": null
+      }
+    },
+    {
+      "type": "video",
+      "attributes": {
+        "id": "abcde-1",
+        "preview_image_url": "https://placekitten.com/400/300",
+        "runtime_seconds": 123,
+        "title": "video 1",
+        "subtitle": "video 1 subtitle",
+        "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov",
+        "current_user": {
+          "favorite": false
+        }
+      }
+    }
+  ],
+  "pagination": {
+    "cursor": "2012-04-23T18:25:43.511Z",
+    "next_cursor": "2012-05-12T17:33:12.837Z"
+  }
+}

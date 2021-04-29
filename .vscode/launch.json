@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dart: Attach to Process",
+      "type": "dart",
+      "request": "attach"
+    },
+    {
+      "name": "Debug Development",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "local", "--dart-define", "BUILD_TYPE=dev"]
+    },
+    {
+      "name": "Debug Staging",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "local", "--dart-define", "BUILD_TYPE=staging"]
+    },
+    {
+      "name": "Debug Store",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "local", "--dart-define", "BUILD_TYPE=store"]
+    },
+    {
+      "name": "Profile Development",
+      "program": "lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "dev", "--dart-define", "BUILD_TYPE=dev", "--profile"]
+    }
+  ]
+}

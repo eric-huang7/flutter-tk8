@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "239686247552",
+    "firebase_url": "https://tk8-dev.firebaseio.com",
+    "project_id": "tk8-dev",
+    "storage_bucket": "tk8-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:004864aa32662617ddf265",
+        "android_client_info": {
+          "package_name": "com.njiuko.tk8.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.njiuko.tk8.staging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:05daf6068b5750a4ddf265",
+        "android_client_info": {
+          "package_name": "com.njiuko.tk8.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.njiuko.tk8.staging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:8961625653000a42ddf265",
+        "android_client_info": {
+          "package_name": "com.njiuko.tk8.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.njiuko.tk8.staging"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

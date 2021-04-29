@@ -1,0 +1,8 @@
+{
+  "id": "af2d32aa-49cf-47a6-8a7f-304664b1e63a",
+  "created_at": "2021-03-01T14:35:41.038150Z",
+  "runtime_seconds": 9,
+  "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/user_videos/cde11d03-6d76-4b9c-b17d-86480d2becae/5e2f9dbb-86b7-41d2-8845-c3f81188e36b.MOV",
+  "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/profile_images/af2d32aa-49cf-47a6-8a7f-304664b1e63a/preview_preview_image.jpeg?X-Amz-Expires=3600\u0026X-Amz-Date=20210312T100933Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210312%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c6a61c25087f821b2107ba32b46c7d3810985ff5794bfe23166dd61fdb100681",
+  "feedback": null
+}

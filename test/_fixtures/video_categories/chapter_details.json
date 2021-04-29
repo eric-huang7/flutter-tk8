@@ -1,0 +1,152 @@
+{
+  "data": {
+    "title": "Der mit dem Ball tanzt",
+    "id": "cde11d03-6d76-4b9c-b17d-86480d2becae",
+    "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer_preview.png",
+    "description": null,
+    "user_videos": [
+      {
+        "id": "af2d32aa-49cf-47a6-8a7f-304664b1e63a",
+        "created_at": "2021-03-01T14:35:41.038150Z",
+        "runtime_seconds": 9,
+        "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/user_videos/cde11d03-6d76-4b9c-b17d-86480d2becae/5e2f9dbb-86b7-41d2-8845-c3f81188e36b.MOV",
+        "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/profile_images/af2d32aa-49cf-47a6-8a7f-304664b1e63a/preview_preview_image.jpeg?X-Amz-Expires=3600\u0026X-Amz-Date=20210312T100933Z\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIAVO6WIQNOXT34QCEK%2F20210312%2Feu-central-1%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c6a61c25087f821b2107ba32b46c7d3810985ff5794bfe23166dd61fdb100681",
+        "feedback": null
+      }
+    ],
+    "chapter_items": [
+      {
+        "type": "video",
+        "attributes": {
+          "id": "d8f30cba-a514-41ad-9cb5-cf7e318a2027",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer_preview.png",
+          "runtime_seconds": 123,
+          "title": "Trailer",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Trailer.mov",
+          "current_users_rating": 4,
+          "current_users_favorite": false
+        }
+      },
+      {
+        "type": "video",
+        "attributes": {
+          "id": "870bd599-ef8f-4ebe-82f8-a65078d12d51",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip1_Ko%CC%88rperta%CC%88uschung_preview.png",
+          "runtime_seconds": 2191,
+          "title": "Körpertäuschung",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip1_Ko%CC%88rperta%CC%88uschung.mp4",
+          "current_users_rating": null,
+          "current_users_favorite": false
+        }
+      },
+      {
+        "type": "question",
+        "attributes": {
+          "id": "8099767c-4961-4ba4-a3d3-cd8c4467d2b0",
+          "description": "Was muss man machen, um Deinen Flanke als Bananenkurve zu schiessen?",
+          "type": "multiple_choice_question",
+          "answers": [
+            {
+              "id": "21e85988-b09f-4afc-9840-6749f29912b4",
+              "description": "Unterschneide Deine Flanke",
+              "is_correct": false
+            },
+            {
+              "id": "884d36c1-ce92-4a69-9b83-ec2e5e7481c4",
+              "description": "Schiesse die Flanke mit der Picke",
+              "is_correct": false
+            },
+            {
+              "id": "b27f103b-83ef-4e85-98fa-faa02a405ab6",
+              "description": "Flanke mit dem Aussenriss",
+              "is_correct": true
+            },
+            {
+              "id": "07cba68d-8a6f-41fe-8341-c82f406bb058",
+              "description": "Flanke mit dem Spann",
+              "is_correct": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "video",
+        "attributes": {
+          "id": "f4bd69b4-ff86-40b4-a0b6-9789aa87a97d",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination_preview.png",
+          "runtime_seconds": 24,
+          "title": "RechtsLinksKombination",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination.mov",
+          "current_users_rating": 2,
+          "current_users_favorite": false
+        }
+      },
+      {
+        "type": "video",
+        "attributes": {
+          "id": "e160dd58-7689-4432-81f3-52e202532995",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip3_MitKoepfchenSpielen_preview.png",
+          "runtime_seconds": 24,
+          "title": "Mit Köpfchen Spielen",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip3_MitKoepfchenSpielen.mov",
+          "current_users_rating": 3,
+          "current_users_favorite": false
+        }
+      },
+      {
+        "type": "question",
+        "attributes": {
+          "id": "7fa09e86-a729-4d37-a71e-1ee52173f13e",
+          "description": "Mit welcher Seite geht Toni im Video am Trainingshütchen vorbei?",
+          "type": "multiple_choice_question",
+          "answers": [
+            {
+              "id": "9f1f1102-cb3b-4daa-86c3-03f451f4006c",
+              "description": "links, mit seinem linken Fuss",
+              "is_correct": true
+            },
+            {
+              "id": "e8516717-0eb9-4ab8-87cc-5c68d5de8d44",
+              "description": "rechts, mit seinem rechten Fuss",
+              "is_correct": false
+            },
+            {
+              "id": "e01adf98-7326-41d1-9670-7ec003573e1a",
+              "description": "rechts, mit seinem linken Fuss",
+              "is_correct": false
+            },
+            {
+              "id": "6b9134e0-d0ed-4472-9adc-ff6c7597b592",
+              "description": "links, mit seinem rechten Fuss",
+              "is_correct": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "video",
+        "attributes": {
+          "id": "8f773b74-d1c3-47dd-a0e0-4ecc00e68ee5",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip4_Finte_preview.png",
+          "runtime_seconds": 24,
+          "title": "Finte",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip4_Finte.mov",
+          "current_users_rating": 3,
+          "current_users_favorite": false
+        }
+      },
+      {
+        "type": "video",
+        "attributes": {
+          "id": "8da7933b-2200-4fda-95b0-6634dcd97da7",
+          "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip5_Gesamteuebung_preview.png",
+          "runtime_seconds": 24,
+          "title": "Gesamte Übung",
+          "video_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip5_Gesamteuebung.mov",
+          "current_users_rating": 4,
+          "current_users_favorite": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "data": [
+    {
+      "title": "Tonis Trainings Tipps",
+      "id": "abcde-1",
+      "type": "chapter_category",
+      "items": [
+        {
+          "type": "chapter",
+          "attributes": {
+            "title": "Der mit dem Ball tanzt",
+            "subtitle": "subtitle",
+            "id": "ccbb63c0-a8cd-47b7-8445-5d85e9c80977",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+          }
+        }
+      ],
+      "pagination": {
+        "cursor": null,
+        "nextCursor": null
+      }
+    },
+    {
+      "title": "Basic Training",
+      "id": "abcde-2",
+      "type": "video_category",
+      "items": [
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-1",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 1",
+            "subtitle": "video 1 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-2",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 2",
+            "subtitle": "video 2 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip1_Körpertäuschung.mp4"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-3",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 3",
+            "subtitle": "video 3 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination.mov"
+          }
+        }
+      ],
+      "pagination": {
+        "cursor": null,
+        "nextCursor": null
+      }
+    },
+    {
+      "title": "Interviews mit Toni",
+      "id": "abcde-3",
+      "type": "video_category",
+      "items": [
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-1",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 1",
+            "subtitle": "video 1 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-2",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 2",
+            "subtitle": "video 2 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip1_Körpertäuschung.mp4"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-3",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 3",
+            "subtitle": "video 3 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination.mov"
+          }
+        }
+      ],
+      "pagination": {
+        "cursor": null,
+        "nextCursor": null
+      }
+    },
+    {
+      "title": "O-Toni",
+      "id": "abcde-4",
+      "type": "video_category",
+      "items": [
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-1",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 1",
+            "subtitle": "video 1 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-2",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 2",
+            "subtitle": "video 2 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip1_Körpertäuschung.mp4"
+          }
+        },
+        {
+          "type": "video",
+          "attributes": {
+            "id": "abcde-3",
+            "preview_image_url": "https://placekitten.com/400/300",
+            "runtime_seconds": 123,
+            "title": "video 3",
+            "subtitle": "video 3 subtitle",
+            "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination.mov"
+          }
+        }
+      ],
+      "pagination": {
+        "cursor": null,
+        "nextCursor": null
+      }
+    }
+  ]
+}

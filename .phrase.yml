@@ -1,0 +1,16 @@
+phrase:
+  access_token: 10e6dadff3c96b6cfdbcb5949fe0076ebed7679af6b3b4f477e0c5945e95aa53
+  project_id: 28903001754490535414d9da6450ab11
+  file_format: nested_json
+
+  push:
+    sources:
+    - file: ./assets/i18n/de.json
+      params:
+        locale_id: 597a3ab336be1b846535426d10ac0310
+
+  pull:
+    targets:
+    - file: ./assets/i18n/de.json
+      params:
+        locale_id: 597a3ab336be1b846535426d10ac0310

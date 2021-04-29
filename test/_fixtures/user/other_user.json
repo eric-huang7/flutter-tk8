@@ -1,0 +1,12 @@
+{
+  "id": "c1fb1729-69bc-47bd-818d-e5e80c1b0dcd",
+  "name": "max33",
+  "birthdate": "2000-09-12",
+  "profile_image": {
+    "preview_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/story-2020-11-14-110244_preview.png",
+    "full_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/story-2020-11-14-110244_preview.png"
+  },
+  "profile_background_image": {
+    "full_image_url": "https://tk8-staging.s3.eu-central-1.amazonaws.com/videos/TKA_DerMitDemBallTanzt_Clip2_RechtsLinksKombination_preview.png"
+  }
+}

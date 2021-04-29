@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="217" viewBox="0 0 375 217">
+    <defs>
+        <radialGradient id="3rjl5hxq6b" cx="50%" cy="50%" r="50.013%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+        </radialGradient>
+        <path id="lnulr55cja" d="M0 0L375 0 375 205 0 217z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="iha7o0bs9c" fill="#fff">
+                <use xlink:href="#lnulr55cja"/>
+            </mask>
+            <use fill="#2A1E9D" xlink:href="#lnulr55cja"/>
+            <path fill="url(#3rjl5hxq6b)" d="M188 320l30 320h-60l30-320zm0 0l147.69 285.46-55.631 22.477L188 320zm0 0L90.581 626.283l-55.23-23.443L188 320zm0 0L-17.061 567.487l-42.426-42.426L188 320zM95.941 12.063l92.057 307.934v.001L188 320l-.001-.001.001.001L393.061 72.513l42.426 42.426-247.483 205.058L473.461 172.31l22.476 55.631L188.002 320l.001.001L508 290v60l-319.996-30 306.28 97.419-23.444 55.23L188.002 320h-.001l247.486 205.061-42.426 42.426L188.001 320H188l-320 30v-60l320 30-.002-.002-306.281-97.417 23.443-55.23 282.838 152.647-.001-.002-247.484-205.057 42.426-42.426 205.057 247.482L40.31 34.539l55.631-22.476zM188 320L-97.46 467.69l-22.477-55.631L188 320zm97.419-306.283l55.23 23.443L188 320l97.419-306.283zM218 0l-30.001 319.998L158 0h60z" mask="url(#iha7o0bs9c)" opacity=".2"/>
+        </g>
+    </g>
+</svg>

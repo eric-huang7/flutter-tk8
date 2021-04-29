@@ -1,0 +1,21 @@
+{
+  "id": "abcde-1",
+  "title": "Tonis Trainings Tipps",
+  "type": "chapter_category",
+  "items": [
+    {
+      "type": "chapter",
+      "attributes": {
+        "title": "Der mit dem Ball tanzt",
+        "subtitle": "subtitle",
+        "id": "ccbb63c0-a8cd-47b7-8445-5d85e9c80977",
+        "preview_image_url": "https://placekitten.com/400/300",
+        "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
+      }
+    }
+  ],
+  "pagination": {
+    "cursor": null,
+    "nextCursor": null
+  }
+}

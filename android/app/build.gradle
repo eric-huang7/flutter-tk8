@@ -1,0 +1,98 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 30
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.njiuko.tk8"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 40
+        versionName "1.0.0"
+        manifestPlaceholders = [applicationLabel: "TK8"]
+        multiDexEnabled true
+    }
+
+    flavorDimensions "build"
+
+    productFlavors {
+        local {
+            dimension "build"
+            applicationIdSuffix ".debug"
+            manifestPlaceholders = [appNameSuffix: " Debug"]
+            signingConfig signingConfigs.debug
+        }
+
+        dev {
+            dimension "build"
+            applicationIdSuffix ".dev"
+            manifestPlaceholders = [appNameSuffix: " Dev"]
+            signingConfig signingConfigs.debug
+        }
+
+        staging {
+            dimension "build"
+            applicationIdSuffix ".staging"
+            manifestPlaceholders = [appNameSuffix: " Staging"]
+            signingConfig signingConfigs.debug
+        }
+
+        store {
+            dimension "build"
+            manifestPlaceholders = [appNameSuffix: ""]
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+apply plugin: 'com.google.gms.google-services'

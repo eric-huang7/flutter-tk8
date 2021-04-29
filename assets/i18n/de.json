@@ -1,0 +1,367 @@
+{
+  "alerts": {
+    "actions": {
+      "cancel": {
+        "title": "Cancel"
+      },
+      "continue": {
+        "title": "Continue"
+      },
+      "ok": {
+        "title": "Ok"
+      },
+      "retry": {
+        "title": "Retry"
+      }
+    },
+    "genericError": {
+      "title": "Something went wrong",
+      "text": "Please try again later."
+    }
+  },
+  "chapterTests": {
+    "congratulationsVideo": {
+      "title": "Congratulations"
+    },
+    "testNumber": "Erreiche Stufe {number}",
+    "correct": {
+      "alert": {
+        "title": "Correct",
+        "text": "Your answer is correct."
+      }
+    },
+    "failed": {
+      "alert": {
+        "title": "Incorrect",
+        "text": "Your answer is not correct. What do you want to do?",
+        "actions": {
+          "watchVideos": {
+            "title": "Rewatch videos"
+          }
+        }
+      }
+    }
+  },
+  "screens": {
+    "main": {
+      "tabs": {
+        "home": {
+          "title": "Home"
+        },
+        "academy": {
+          "title": "Academy"
+        },
+        "profile": {
+          "title": "Profil"
+        }
+      }
+    },
+    "articleDetails": {
+      "buttons": {
+        "share": "Artikel Teilen"
+      }
+    },
+    "chapterDetails": {
+      "uploadSuccessAlert": {
+        "title": "Upload successful",
+        "text": "Your video was successfully uploaded."
+      },
+      "mediaLibraryPermissionsRequiredAlert": {
+        "title": "Required access to media library",
+        "text": "Access to the media library is required in order to select the video to upload. Please change permissions in settings app."
+      },
+      "listHeader": {
+        "chapterCompleted": "ABGESCHLOSSEN",
+        "videosInfo": {
+          "count": "{value} Videos",
+          "duration": "{value} Minuten"
+        },
+        "actions": {
+          "startChapter": {
+            "title": "Kurs beginnen"
+          },
+          "continueChapter": {
+            "title": "Weiter"
+          },
+          "trailerVideo": {
+            "title": "Trailer"
+          }
+        }
+      },
+      "listItems": {
+        "trailer": "TRAILER",
+        "session": "SESSION {number}"
+      },
+      "academy": {
+        "tab": {
+          "title": "ACADEMY"
+        },
+
+        "videoItems": {
+          "duration": "{value} Min",
+          "lessThanAMinute": "Less than 1 Min"
+        },
+        "quizItem": {
+          "title": "Quiz beantworten",
+          "questions": {
+            "0": "No questions",
+            "1": "1 Frage",
+            "else": "{{value}} Fragen"
+          }
+        }
+      },
+      "community": {
+        "tab": {
+          "title": "COMMUNITY"
+        },
+        "myVideo": {
+          "header": "MEIN VIDEO",
+          "coachFeedback": {
+            "noFeedbackYet": "Dein Video wurde empfangen. Einer unserer Coaches wird es so schnell wie möglich anschauen.",
+            "hasFeedback": "Du hast Feedback von der Academy erhalten."
+          },
+          "uploadButton": {
+            "title": "VIDEO HOCHLADEN UND FEEDBACK ERHALTEN"
+          }
+        },
+        "feedbackDrawer": {
+          "title": "FEEDBACK"
+        },
+        "videosList": {
+          "title": "VIDEOS VON ANDEREN USERN",
+          "noVideosYet": "Es wurden noch keine Videos zu diesem Kapitel von anderen Usern hochgeladen. Sei der Erste!"
+        }
+      },
+      "errors": {
+        "chapterNotCompleted": {
+          "title": "NOCH NICHT FREIGESCHALTET",
+          "text": "Um dein eigenes Video hochzuladen, musst du dieses Kapitel abgeschlossen haben und dich als Premium-Member registrieren.",
+          "actions": {
+            "continueTraining": {
+              "title": "Weitertrainieren"
+            }
+          }
+        }
+      }
+    },
+    "exerciseOverview": {
+      "exerciseCompleted": "ABGESCHLOSSEN",
+      "minTrained": "MIN. TRAINIERT",
+      "timesFinished": "EINHEITEN",
+      "videoUploadRequirement": "Trainiere mindestens {value} Minuten,\num ein video hochladen zu können",
+      "actions": {
+        "watchTutorial": {
+          "title": "Erklärungs-Video ansehen"
+        },
+        "start": {
+          "title": "Training starten"
+        }
+      }
+    },
+    "exercise": {
+      "countdownText": "LEGT JETZT DEIN SMARTPHONE WEG",
+      "trainingRequirementNotCompleted": "Trainiere mindestens\n{value} Minuten, um zu bestehen",
+      "trainingRequirementCompleted": "Du hast mindestens {value} Minuten trainiert.\nWeitere Minuten werden trotzdem deiner Statistik gutgeschrieben.",
+      "trainingLimitReached": "Die maximale Übungsdauer ist erreicht. Du kannst weiter trainieren, jedoch werden Dir keine zusätzlichen Minuten auf Deinem Trainingskonto gutgeschrieben.",
+      "actions": {
+        "cancelTraining": {
+          "title": "Abbrechen"
+        },
+        "finish": {
+          "title": "Beenden"
+        },
+        "showScheme": {
+          "title": "Skizze ansehen"
+        }
+      },
+      "cancelTrainingAlert": {
+        "title": "BIST DU SICHER, DASS DU DEIN TRAINING VORZEITIG BEENDEN MÖCHTEST?",
+        "actions": {
+          "cancel": {
+            "title": "Übung beenden"
+          },
+          "back": {
+            "title": "Zurück"
+          }
+        }
+      }
+    },
+    "exerciseGetFeedback": {
+      "getFeedback": "ERHALTE FEEDBACK",
+      "getFeedbackDescription": "Nimm ein Video von dieser Übung auf und lade es hoch, um Feedback von einem Coach zu erhalten.",
+      "actions": {
+        "uploadVideo": {
+          "title": "Video hochladen"
+        },
+        "later": {
+          "title": "Später"
+        }
+      }
+    },
+    "exerciseDone": {
+      "exerciseFinished": "ÜBUNG\nABGESCHLOSSEN",
+      "finishedDescription": "Du kannst diese Übung jederzeit wieder üben.",
+      "minutesTrained": "MINUTEN TRAINIERT",
+      "actions": {
+        "continue": {
+          "title": "Weiter"
+        },
+        "trainAgain": {
+          "title": "Nochmal trainieren"
+        }
+      }
+    },
+    "homeStream": {
+      "title": "Toni Kroos Fußballschule",
+      "tabbarLabel": "Home"
+    },
+    "login": {
+      "title": "WILLKOMMEN\nZURÜCK",
+      "pages": {
+        "enterEmail": {
+          "field": {
+            "label": "E-Mail"
+          },
+          "next": "Weiter",
+          "explanation": "Bitte gebe deine E-Mail Adresse ein, dann erhälst du einen 6-stelligen Code mit dem du dich im nächsten Schritt einloggen kannst."
+        },
+        "enterOTP": {
+          "field": {
+            "label": "Code"
+          },
+          "next": "Anmelden"
+        }
+      }
+    },
+    "signUp": {
+      "actions": {
+        "next": {
+          "title": "Weiter"
+        }
+      },
+      "errors": {
+        "invalidUsername": "Invalid username",
+        "invalidBirthdate": "Invalid birthdate"
+      },
+      "pages": {
+        "welcome": {
+          "title": "DER COACH\nAN DEINER\nSEITE!",
+          "actions": {
+            "next": {
+              "title": "Benutzername sichern"
+            },
+            "login": {
+              "title": "Anmelden"
+            }
+          }
+        },
+        "username": {
+          "field": {
+            "label": "BENUTZERNAME"
+          },
+          "legal": "By entering your username, you’re agreeing to our (Terms of Service)[http://tos] and (Privacy Policy)[http://privacy]"
+        },
+        "birthdate": {
+          "field": {
+            "label": "GEBURTSDATUM"
+          },
+          "datePicker": {
+            "label": "Geburstdatum",
+            "helperText": "Select your birthdate"
+          }
+        },
+        "done": {
+          "title": "BALD GEHT\nES LOS!"
+        }
+      }
+    },
+    "academy": {
+      "greeting": "Hallo, {name}",
+      "subline": "Was möchtest du heute lernen?",
+      "tabbarLabel": "Videos",
+      "chapters": {
+        "chapterLabel": "KAPITEL {number}",
+        "videos": "{value} Videos",
+        "minutes": "{value} Minuten",
+        "allChapters": "Alle Kurse"
+      },
+      "categoryTile": {
+        "showAll": "Alle Anzeigen"
+      }
+    },
+    "chaptersOverview": {
+      "title": "Alle Kurse"
+    },
+    "videoPlayer": {
+      "chapter": {
+        "noMoreVideos": "Du hast das Kapitel erfolgreich bestanden.",
+        "rewatchVideo": "Noch einmal ansehen?",
+        "actions": {
+          "playNextVideo": {
+            "title": "Nächste Session in {seconds}"
+          },
+          "backToChapterOverview": {
+            "title": "Zurück zur Übersicht"
+          }
+        }
+      }
+    },
+    "myProfile": {
+      "view": {
+        "header": {
+          "title": "DEIN PROFIL",
+          "age": "{age} Jahre"
+        }
+      },
+      "edit": {
+        "title": "PROFIL BEARBEITEN",
+        "mediaLibraryPermissionsRequiredAlert": {
+          "title": "Required access to media library",
+          "text": "Access to the media library is required in order to select the image. Please change permissions in settings app."
+        },
+        "discardChangesAlert": {
+          "title": "Discard changes?",
+          "text": "Do you really want to close and discard changes?",
+          "actions": {
+            "discard": {
+              "title": "Discard changes"
+            }
+          }
+        },
+        "invalidUserData": {
+          "title": "Invalid user data",
+          "text": "Please check the changes you made and try again."
+        },
+        "validations": {
+          "invalidUsername": "Invalid username"
+        },
+        "imageCropTitle": {
+          "profile": "PROFILBILD POSITIONIEREN",
+          "background": "TITELBILD POSITIONIEREN"
+        },
+        "profileImageSelectionAlert": {
+          "title": "Profile photo source",
+          "actions": {
+            "camera": "Foto aufnehmen",
+            "gallery": "Aus Mediathek wählen"
+          }
+        },
+        "fields": {
+          "username": {
+            "label": "Benutzername"
+          },
+          "birthdate": {
+            "label": "Geburtsdatum"
+          }
+        }
+      }
+    },
+    "webview": {
+      "actions": {
+        "done": {
+          "title": "done"
+        }
+      }
+    }
+  }
+}

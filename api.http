@@ -1,0 +1,3 @@
+# get home stream
+
+GET https://heroku.t3k11.de/api/v1/home_stream
