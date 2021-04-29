@@ -1,6 +1,8 @@
 # iOS
 
-## build 40
+## build <next>
+
+- TK8-464: Dynamic links setup
 
 ## build 40
 

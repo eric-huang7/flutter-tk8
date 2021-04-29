@@ -42,7 +42,7 @@ android {
         applicationId "com.njiuko.tk8"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 40
+        versionCode 41
         versionName "1.0.0"
         manifestPlaceholders = [applicationLabel: "TK8"]
         multiDexEnabled true

@@ -5,10 +5,10 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:tk8/config/app_config.dart';
 import 'package:tk8/config/styles.config.dart';
 import 'package:tk8/services/services.dart';
+import 'package:tk8/ui/screens/academy/academy.screen.dart';
 import 'package:tk8/ui/screens/debug/debug.screen.dart';
 import 'package:tk8/ui/screens/home_stream/home_stream.screen.dart';
 import 'package:tk8/ui/screens/profile/me/view/my_profile.screen.dart';
-import 'package:tk8/ui/screens/academy/academy.screen.dart';
 import 'package:tk8/ui/widgets/widgets.dart';
 
 const _tabs = [

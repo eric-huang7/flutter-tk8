@@ -1,5 +1,9 @@
 # Android
 
+## build <next>
+
+- TK8-464: Dynamic links setup
+
 ## build 41
 
 - TK8-408: Add login flow using OTP via email

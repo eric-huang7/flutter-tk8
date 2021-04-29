@@ -4,6 +4,7 @@ import 'package:tk8/data/api/base.api.dart';
 import 'package:tk8/data/repositories/academy.repository.dart';
 import 'package:tk8/data/repositories/articles.repository.dart';
 import 'package:tk8/data/repositories/exercise.repository.dart';
+import 'package:tk8/services/dynamic_links.service.dart';
 
 import '../data/repositories/auth.repository.dart';
 import '../data/repositories/home_stream.repository.dart';
@@ -28,6 +29,8 @@ void setupServicesInjection() {
   getIt.registerLazySingleton(() => VideosService());
   getIt.registerLazySingleton(() => ChaptersTestsService());
   getIt.registerLazySingleton(() => MediaLibraryService());
+  getIt
+      .registerLazySingleton(() => DynamicLinksService()..handleDynamicLinks());
   // data services
   getIt.registerLazySingleton(() => Api());
   getIt.registerLazySingleton(() => UserRepository());
