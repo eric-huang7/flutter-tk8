@@ -1,6 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:keyboard_visibility/keyboard_visibility.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:tk8/config/styles.config.dart';
 
 import '../common/widgets/background.dart';
@@ -16,25 +18,24 @@ class SignUpScreenView extends StatefulWidget {
 }
 
 class _SignUpScreenViewState extends State<SignUpScreenView> {
-  final _keyboardVisibility = KeyboardVisibilityNotification();
-  int _keyboardVisibilitySubscriberId;
+  StreamSubscription<bool> keyboardListener;
   bool _isKeyboardVisible;
 
   @override
   void initState() {
     super.initState();
-    _isKeyboardVisible = _keyboardVisibility.isKeyboardVisible;
-    _keyboardVisibilitySubscriberId = _keyboardVisibility.addNewListener(
-      onChange: _onKeyboardVisibilityChange,
-    );
+    final keyboardVisibilityController = KeyboardVisibilityController();
+    _isKeyboardVisible = keyboardVisibilityController.isVisible;
+    keyboardListener =
+        keyboardVisibilityController.onChange.listen((isVisible) {
+      _onKeyboardVisibilityChange(isVisible);
+    });
   }
 
   @override
   void dispose() {
+    keyboardListener.cancel();
     super.dispose();
-    if (_keyboardVisibilitySubscriberId != null) {
-      _keyboardVisibility.removeListener(_keyboardVisibilitySubscriberId);
-    }
   }
 
   @override
@@ -111,7 +112,7 @@ class _SignUpScreenViewState extends State<SignUpScreenView> {
     }
   }
 
-  void _onKeyboardVisibilityChange(visible) {
-    setState(() => _isKeyboardVisible = visible);
+  void _onKeyboardVisibilityChange(bool isVisible) {
+    setState(() => _isKeyboardVisible = isVisible);
   }
 }

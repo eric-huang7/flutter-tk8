@@ -3,6 +3,7 @@
 ## build <next>
 
 - TK8-464: Dynamic links setup
+- TK8-473: Keyboard package replacement
 
 ## build 40
 
