@@ -5,9 +5,9 @@ enum BuildType {
   store,
 }
 
-const devApiHost = 'https://heroku.t3k11.de';
-const stagingApiHost = 'https://heroku.t3k11.de';
-const productionApiHost = 'https://heroku.t3k11.de';
+const devApiHost = 'https://tk8-api.herokuapp.com';
+const stagingApiHost = 'https://tk8-api.herokuapp.com';
+const productionApiHost = 'https://tk8-api.herokuapp.com';
 
 const defaultApiHost = {
   BuildType.local: devApiHost,
