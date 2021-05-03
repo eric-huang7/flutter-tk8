@@ -1,6 +1,6 @@
 # Android
 
-## build <next>
+## build 42
 
 - TK8-464: Dynamic links setup
 - TK8-473: Keyboard package replacement
