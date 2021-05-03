@@ -10,6 +10,7 @@ class User extends Equatable {
   final DateTime birthdate;
   final Image profileImage;
   final Image backgroudImage;
+  final bool activated;
 
   const User._({
     @required this.id,
@@ -17,6 +18,7 @@ class User extends Equatable {
     @required this.birthdate,
     this.profileImage,
     this.backgroudImage,
+    this.activated = false,
   })  : assert(id != null),
         assert(username != null),
         assert(birthdate != null);
@@ -29,6 +31,7 @@ class User extends Equatable {
         birthdate: DateTime.tryParse(map['birthdate']),
         profileImage: Image.fromMap(map['profile_image']),
         backgroudImage: Image.fromMap(map['profile_background_image']),
+        activated: map['activated'],
       );
     } catch (e) {
       debugLogError('failed to parse user', e);
@@ -43,6 +46,7 @@ class User extends Equatable {
         birthdate,
         profileImage,
         backgroudImage,
+        activated,
       ];
 
   @override

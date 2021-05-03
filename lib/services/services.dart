@@ -6,6 +6,7 @@ export '../data/repositories/videos.repository.dart';
 export 'auth.service.dart';
 export 'chapters_tests.service.dart';
 export 'device.service.dart';
+export 'dynamic_links.service.dart';
 export 'media_library.service.dart';
 export 'navigation.service.dart';
 export 'secure_store.service.dart';

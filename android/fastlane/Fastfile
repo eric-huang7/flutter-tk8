@@ -10,10 +10,10 @@ end
 
 BUILD_INFO = {
   dev: {
-    appcenter_name: "TK8-Development-1"
+    firebase_app_id: '1:239686247552:android:40d6dbae0bed36a2ddf265'
   },
   staging: {
-    appcenter_name: "TK8-Staging-1"
+    firebase_app_id: '1:239686247552:android:8920050b8991933bddf265'
   }
 }
 
@@ -42,19 +42,18 @@ platform :android do
     # build app
     build_flutter(flavor: flavor)
 
-    # upload app center
+
+    # upload to firebase
     app_info = BUILD_INFO[flavor]
     apk_name = "app-#{flavor}-release.apk"
     apk_file = "../build/app/outputs/apk/#{flavor}/release/#{apk_name}"
-    appcenter_upload(
-      api_token: "1b39cde45fc2d9587df839577ac50d00e6d0723b",
-      owner_name: "operations-dhbf",
-      app_name: app_info[:appcenter_name],
-      file: apk_file,
+    firebase_app_distribution(
+      app: app_info[:firebase_app_id],
+      firebase_cli_token: '1//09GPpBfv7OeOvCgYIARAAGAkSNwF-L9Ir5q6SSUa9asVLmlFWAYqyPLITwrTZTOXwit3h042EY24OhzQzk66FcEPm0YRbwJKY8y4',
+      apk_path: apk_file,
       release_notes: RELEASE_NOTES,
-      notify_testers: true,
-      destinations: "*",
-      destination_type: "group"
+      groups: 'test-group',
+
     )
 
   end

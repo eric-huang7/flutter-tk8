@@ -97,7 +97,8 @@ void main() {
         when(apiMock.post(
           path: anyNamed('path'),
           body: anyNamed('body'),
-          addClientHeaders: true,
+          addClientHeaders: anyNamed('addClientHeaders'),
+          queryParameters: anyNamed('queryParameters'),
         )).thenAnswer(
           (realInvocation) async => {
             'data': {
@@ -123,11 +124,13 @@ void main() {
         verify(apiMock.post(
           path: 'users',
           body: {
-            'name': name,
-            'birthdate': {
-              'year': date.year,
-              'month': date.month,
-              'day': date.day
+            'user': {
+              'name': name,
+              'birthdate': {
+                'year': date.year,
+                'month': date.month,
+                'day': date.day
+              }
             }
           },
           addClientHeaders: true,
@@ -144,27 +147,8 @@ void main() {
         final result = await repo.createUser(name, date);
 
         // assert
-        expect(result.user.username, name);
-        expect(result.user.birthdate, date);
-        expect(result.token, token);
-      });
-
-      test('should emit new user data in my profile stream', () async {
-        // arrange
-        _mockApi();
-        final repo = UserRepository();
-
-        // act
-        await repo.createUser(name, date);
-
-        // assert
-        expect(
-            repo.myProfileUserStream,
-            emits(User.fromMap({
-              'id': id,
-              'name': name,
-              'birthdate': date.toIso8601String(),
-            })));
+        expect(result.userId, id);
+        expect(result.optToken, token);
       });
     });
 

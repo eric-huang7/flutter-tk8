@@ -18,6 +18,9 @@ Future<void> setupAndRunApp() async {
 
   await Firebase.initializeApp();
 
+  // make sure DynamicLinksService is started
+  getIt<DynamicLinksService>().handleDynamicLinks();
+
   // Set `enableInDevMode` to true to see reports while in debug mode
   // This is only to be used for confirming that reports are being
   // submitted as expected. It is not intended to be used for everyday

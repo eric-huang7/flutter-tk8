@@ -18,10 +18,27 @@
 	<string>$(APP_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Bundle ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.kmc.tk8.debug</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>40</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>WE NEED TO SET THIS BEFORE RELEASE!!!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>WE NEED TO SET THIS BEFORE RELEASE!!!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,9 +58,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>WE NEED TO SET THIS BEFORE RELEASE!!!</string>
-	<key>NSCameraUsageDescription</key>
-	<string>WE NEED TO SET THIS BEFORE RELEASE!!!</string>
 </dict>
 </plist>

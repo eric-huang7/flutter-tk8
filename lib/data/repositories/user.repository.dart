@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:rxdart/rxdart.dart';
+
 import 'package:tk8/data/api/api.dart';
 import 'package:tk8/data/models/user.model.dart';
 import 'package:tk8/services/services.dart';
@@ -32,11 +33,11 @@ class UserRepositoryException implements Exception {
   });
 }
 
-class CreatedUser {
-  final User user;
-  final String token;
+class CreateUserResponse {
+  final String userId;
+  final String optToken;
 
-  CreatedUser(this.user, this.token);
+  CreateUserResponse(this.userId, this.optToken);
 }
 
 class UserRepository {
@@ -73,13 +74,27 @@ class UserRepository {
     }
   }
 
-  Future<CreatedUser> createUser(String username, DateTime birthdate) async {
+  Future<CreateUserResponse> createUser(
+    String username,
+    DateTime birthdate, [
+    String email,
+    String invitationCode,
+  ]) async {
+    final isValidActiveAccount = email != null && invitationCode != null;
     final body = {
-      'name': username,
-      'birthdate': {
-        'year': birthdate.year,
-        'month': birthdate.month,
-        'day': birthdate.day
+      'user': {
+        'name': username,
+        'birthdate': {
+          'year': birthdate.year,
+          'month': birthdate.month,
+          'day': birthdate.day
+        },
+        if (isValidActiveAccount) ...{
+          'email': email,
+          'claimed_invitation': {
+            'code': invitationCode,
+          }
+        }
       }
     };
     final response = await _api.post(
@@ -88,16 +103,25 @@ class UserRepository {
       addClientHeaders: true,
     );
 
-    // TODO: once the BE responds with name and birthdate we can simplify this
-    final user = User.fromMap({
-      'name': username,
-      'birthdate': birthdate.toString(),
-      ...response['data'],
-    });
+    final userId = response['data']['id'];
     final token = response['data']['token'];
-    _myProfileUserController.add(user);
 
-    return CreatedUser(user, token);
+    return CreateUserResponse(userId, token);
+  }
+
+  Future<void> activateAccount({String email, String invitationCode}) async {
+    final body = {
+      'user': {
+        'email': email,
+        'claimed_invitation': {
+          'code': invitationCode,
+        }
+      }
+    };
+    await _api.put(
+      path: 'me/activate',
+      body: body,
+    );
   }
 
   Future<User> loadMyProfile() async {

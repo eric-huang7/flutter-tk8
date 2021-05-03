@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 import '../../../common/widgets/field_container.dart';
-import '../../sign_up.bloc.dart';
-import 'sign_up_birthdate.bloc.dart';
+import '../../../sign_up/sign_up.viewmodel.dart';
+import 'sign_up_birthdate.viewmodel.dart';
 
 class SignUpBirthdatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final signUpState = context.watch<SignUpBloc>().state;
-    return BlocProvider(
-      create: (_) => SignUpBirthdateBloc(signUpState.birthdate),
+    final signUpViewModel = context.watch<SignUpViewModel>();
+    return ChangeNotifierProvider(
+      create: (_) => SignUpBirthdateViewModel(signUpViewModel),
       child: SignUpBirthdatePageView(),
     );
   }
@@ -28,7 +29,7 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
   @override
   void initState() {
     super.initState();
-    final birthdate = context.read<SignUpBirthdateBloc>().state.birthdate;
+    final birthdate = context.read<SignUpBirthdateViewModel>().birthdate;
     if (birthdate == null) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _selectDate(context));
     }
@@ -36,12 +37,12 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
 
   @override
   Widget build(BuildContext context) {
-    final pageState = context.watch<SignUpBirthdateBloc>().state;
+    final pageState = context.watch<SignUpBirthdateViewModel>();
     return AuthFieldContainer(
       title: translate('screens.signUp.pages.birthdate.field.label'),
       buttonTitle: translate('screens.signUp.actions.next.title'),
       onActionPressed: () {
-        context.read<SignUpBloc>().setBirthdate(pageState.birthdate);
+        context.read<SignUpBirthdateViewModel>().submit();
       },
       errorMessage: pageState.errorMessage,
       child: GestureDetector(
@@ -78,10 +79,10 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
   }
 
   Future<void> _selectDate(BuildContext context) async {
-    final bloc = context.read<SignUpBirthdateBloc>();
+    final model = context.read<SignUpBirthdateViewModel>();
     final picked = await showDatePicker(
       context: context,
-      initialDate: bloc.state.birthdate ?? DateTime.now(),
+      initialDate: model.birthdate ?? DateTime.now(),
       firstDate: DateTime(1900),
       lastDate: DateTime.now(),
       fieldLabelText:
@@ -89,8 +90,8 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
       helpText:
           translate('screens.signUp.pages.birthdate.datePicker.helperText'),
     );
-    if (picked != null && picked != bloc.state.birthdate) {
-      bloc.updateBirthdate(picked);
+    if (picked != null && picked != model.birthdate) {
+      model.updateBirthdate(picked);
     }
   }
 }

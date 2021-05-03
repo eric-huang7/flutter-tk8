@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:tk8/config/styles.config.dart';
 
-import '../../../common/widgets/next_button.dart';
-import '../../sign_up.bloc.dart';
+import 'package:tk8/config/styles.config.dart';
+import 'package:tk8/ui/screens/auth/common/widgets/next_button.dart';
+
+import '../../sign_up.viewmodel.dart';
 
 class SignUpWelcomePage extends StatelessWidget {
   @override
@@ -25,12 +26,13 @@ class SignUpWelcomePage extends StatelessWidget {
                       title: translate(
                           'screens.signUp.pages.welcome.actions.next.title'),
                       onPressed: () =>
-                          context.read<SignUpBloc>().goToNextPage(),
+                          context.read<SignUpViewModel>().goToNextPage(),
                     ),
                   ],
                 ),
                 TextButton(
-                    onPressed: () => context.read<SignUpBloc>().goToLogin(),
+                    onPressed: () =>
+                        context.read<SignUpViewModel>().goToLogin(),
                     child: Text(
                       translate(
                           'screens.signUp.pages.welcome.actions.login.title'),

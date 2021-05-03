@@ -30,7 +30,7 @@ void main() {
   group('home stream api', () {
     test('should fetch home stream list', () async {
       // arrange
-      final uri = Uri.parse('https://heroku.t3k11.de/api/v1/home_stream');
+      final uri = Uri.parse('https://tk8-api.herokuapp.com/api/v1/home_stream');
       final streamJson = fixture('home_stream/list.json');
       final videoJson = fixture('videos/video.json');
       final imageJson = fixture('home_stream/image.json');
@@ -75,7 +75,7 @@ void main() {
     test('should load next stream page when next cursor is given', () async {
       // arrange
       final uri = Uri.parse(
-          'https://heroku.t3k11.de/api/v1/home_stream?before=2012-04-23T18%3A25%3A43.511Z');
+          'https://tk8-api.herokuapp.com/api/v1/home_stream?before=2012-04-23T18%3A25%3A43.511Z');
       final streamJson = fixture('home_stream/list.json');
       final mockClient = mockApiClientWithResponse(body: streamJson);
       final api = Api(mockClient);

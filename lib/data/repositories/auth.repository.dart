@@ -9,7 +9,8 @@ import 'package:tk8/util/log.util.dart';
 enum AuthStatus {
   unknown,
   signedOut,
-  signedIn,
+  signedInInactive,
+  signedInActive,
 }
 
 class AuthRepository {

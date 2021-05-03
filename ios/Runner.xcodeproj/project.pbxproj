@@ -47,6 +47,7 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B058A751109C747D4BF7DA79 /* Pods-Runner.release-store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-store.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-store.xcconfig"; sourceTree = "<group>"; };
 		B31E40D2A800236B9EFFB4B0 /* Pods-Runner.profile-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-dev.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-dev.xcconfig"; sourceTree = "<group>"; };
+		DC0E89312639E56800B508A2 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 		DC36A81125558BE700765711 /* staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = staging.xcconfig; path = Flutter/staging.xcconfig; sourceTree = "<group>"; };
 		DC36A81225558BE700765711 /* tk8.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = tk8.xcconfig; path = Flutter/tk8.xcconfig; sourceTree = "<group>"; };
 		DC36A81325558BE700765711 /* local.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = local.xcconfig; path = Flutter/local.xcconfig; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				DC0E89312639E56800B508A2 /* Runner.entitlements */,
 				DC8737AC257101C500569100 /* GoogleService-Info.plist */,
 				DC36A81F25558DC900765711 /* LaunchScreen.storyboard */,
 				DC36A82025558DC900765711 /* Main.storyboard */,
@@ -406,10 +408,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = QDJZ32G8HA;
+				DEVELOPMENT_TEAM = P3R9K3Q484;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,7 +429,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID)$(APP_ID_SUFFIX)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.njiuko.tk8.dev";
+				PROVISIONING_PROFILE_SPECIFIER = "TK Academy dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -553,9 +556,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = YUQHEPRMAS;
+				DEVELOPMENT_TEAM = P3R9K3Q484;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,7 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID)$(APP_ID_SUFFIX)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Xcode iOS Wildcard App ID";
+				PROVISIONING_PROFILE_SPECIFIER = "TK Academy debug";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -587,10 +591,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = QDJZ32G8HA;
+				DEVELOPMENT_TEAM = P3R9K3Q484;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,7 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID)$(APP_ID_SUFFIX)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.njiuko.tk8.dev";
+				PROVISIONING_PROFILE_SPECIFIER = "TK Academy dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -676,10 +681,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = QDJZ32G8HA;
+				DEVELOPMENT_TEAM = P3R9K3Q484;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -696,7 +702,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_ID)$(APP_ID_SUFFIX)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.njiuko.tk8.staging";
+				PROVISIONING_PROFILE_SPECIFIER = "TK Academy staging";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -765,6 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = "";

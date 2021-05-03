@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
+
+import 'package:tk8/data/models/auth.model.dart';
+import 'package:tk8/data/models/user.model.dart';
 import 'package:tk8/services/services.dart';
 
 class AuthService {
@@ -8,9 +11,11 @@ class AuthService {
 
   Stream<AuthStatus> get statusStream => Rx.combineLatest2(
           _authRepository.tokenStream, _userRepository.myProfileUserStream,
-          (token, user) {
+          (AuthToken token, User user) {
         if (token != null && user != null) {
-          return AuthStatus.signedIn;
+          return user.activated
+              ? AuthStatus.signedInActive
+              : AuthStatus.signedInInactive;
         } else {
           return AuthStatus.signedOut;
         }
@@ -62,17 +67,43 @@ class AuthService {
   Future<void> signUp({
     @required String username,
     @required DateTime birthdate,
+    String email,
+    String invitationCode,
   }) async {
     assert(username != null && username.isNotEmpty);
     assert(birthdate != null);
 
     try {
-      final createdUser = await _userRepository.createUser(username, birthdate);
+      final newUserInfo = await _userRepository.createUser(
+        username,
+        birthdate,
+        email,
+        invitationCode,
+      );
+
       await _authRepository.signInWithUserId(
-          createdUser.user.id, createdUser.token);
+        newUserInfo.userId,
+        newUserInfo.optToken,
+      );
+      await _userRepository.loadMyProfile();
     } on Exception {
       await signOut();
+      rethrow;
     }
+  }
+
+  Future<void> activateAccount({
+    @required String email,
+    @required String invitationCode,
+  }) async {
+    assert(email != null && email.isNotEmpty);
+    assert(invitationCode != null);
+
+    await _userRepository.activateAccount(
+      email: email,
+      invitationCode: invitationCode,
+    );
+    await _userRepository.loadMyProfile();
   }
 
   Future<void> signOut() async {

@@ -3,14 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:provider/provider.dart';
+
 import 'package:tk8/config/styles.config.dart';
+import 'package:tk8/ui/screens/auth/sign_up/pages/busy/sign_up_busy.dart';
 
 import '../common/widgets/background.dart';
 import 'pages/birthdate/sign_up_birthdate.dart';
-import 'pages/create_user/sign_up_create_user.dart';
+import 'pages/email/sign_up_email.dart';
 import 'pages/username/sign_up_username.dart';
+import 'pages/waiting_invitation/sign_up_waiting_invitation.dart';
 import 'pages/welcome/sign_up_welcome.dart';
-import 'sign_up.bloc.dart';
+import 'sign_up.viewmodel.dart';
 
 class SignUpScreenView extends StatefulWidget {
   @override
@@ -48,8 +52,8 @@ class _SignUpScreenViewState extends State<SignUpScreenView> {
           Positioned.fill(
             child: Column(
               children: [
-                _buildAppBar(context),
-                _buildPage(context),
+                _buildAppBar(),
+                _buildPage(),
               ],
             ),
           ),
@@ -59,55 +63,50 @@ class _SignUpScreenViewState extends State<SignUpScreenView> {
   }
 
   Widget _buildSignUpBackground() {
-    return BlocBuilder<SignUpBloc, SignUpState>(
-        buildWhen: (prevState, curState) =>
-            prevState.backgroundTitle != curState.backgroundTitle ||
-            prevState.isCurrentPageInput != curState.isCurrentPageInput,
-        builder: (context, state) {
-          return AuthBackground(
-              keyboardVisible: _isKeyboardVisible,
-              backgroundTitle: state.backgroundTitle,
-              isInputMode: state.isCurrentPageInput);
-        });
+    final model = context.watch<SignUpViewModel>();
+    return AuthBackground(
+        keyboardVisible: _isKeyboardVisible,
+        backgroundTitle: model.backgroundTitle,
+        isInputMode: model.isCurrentPageInput);
   }
 
-  Widget _buildAppBar(BuildContext context) {
-    return BlocBuilder<SignUpBloc, SignUpState>(
-      builder: (context, state) {
-        return AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          leading: state.canGoBack
-              ? IconButton(
-                  icon: const Icon(
-                    Icons.arrow_back_ios,
-                    color: TK8Colors.ocean,
-                  ),
-                  onPressed: () {
-                    context.read<SignUpBloc>().goToPreviousPage();
-                  },
-                )
-              : null,
-        );
-      },
+  Widget _buildAppBar() {
+    final model = context.watch<SignUpViewModel>();
+    return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      leading: model.canGoBack
+          ? IconButton(
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: TK8Colors.ocean,
+              ),
+              onPressed: () {
+                context.read<SignUpViewModel>().goToPreviousPage();
+              },
+            )
+          : null,
     );
   }
 
-  Widget _buildPage(BuildContext context) {
-    final bloc = context.watch<SignUpBloc>();
-    switch (bloc.state.currentPageType) {
+  Widget _buildPage() {
+    final model = context.watch<SignUpViewModel>();
+    if (model.isBusy) return SignUpBusyPage();
+
+    switch (model.currentPageType) {
       case SignUpPageType.welcome:
         return SignUpWelcomePage();
       case SignUpPageType.username:
         return SignUpUsernamePage();
       case SignUpPageType.birthday:
         return SignUpBirthdatePage();
-      case SignUpPageType.createUser:
-        return SignUpCreateUserPage();
+      case SignUpPageType.email:
+        return SignUpEmailPage();
+      case SignUpPageType.waitingForInvitation:
+        return SignUpWaitingInvitationPage();
       default:
         return Center(
-          child: Text(
-              'Page of type ${bloc.state.currentPageType} not implemented'),
+          child: Text('Page of type ${model.currentPageType} not implemented'),
         );
     }
   }

@@ -18,7 +18,7 @@ void main() {
         const chapterId = '123';
         const fixtureFile = 'video_categories/chapter_details.json';
         final uri = Uri.parse(
-            'https://heroku.t3k11.de/api/v1/chapters/$chapterId');
+            'https://tk8-api.herokuapp.com/api/v1/chapters/$chapterId');
         final chapterJson = fixture(fixtureFile);
         final chapterMap = fixtureAsMap(fixtureFile);
         final mockClient = mockApiClientWithResponse(body: chapterJson);

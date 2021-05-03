@@ -270,8 +270,9 @@
             "helperText": "Select your birthdate"
           }
         },
-        "done": {
-          "title": "BALD GEHT\nES LOS!"
+        "waitingForInvitation": {
+          "title": "BALD GEHT\nES LOS!",
+          "message": "Vielen Dank für die Registrierung. Bitte warte, bis du eine Einladung erhältst."
         }
       }
     },

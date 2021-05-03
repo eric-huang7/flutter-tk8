@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com</string>
+	<string>239686247552-egrvs244jp2kumedvbtiein6vb7sf7mf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.239686247552-up8j4tggtectscojgbltch54j9v84jor</string>
+	<string>com.googleusercontent.apps.239686247552-egrvs244jp2kumedvbtiein6vb7sf7mf</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDqL_GUF6dmD90A6l4tod7Az5KuJhT9ySQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.njiuko.tk8.staging</string>
+	<string>com.kmc.tk8.staging</string>
 	<key>PROJECT_ID</key>
 	<string>tk8-dev</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:239686247552:ios:44c852121bf08243ddf265</string>
+	<string>1:239686247552:ios:5f91c5799b69fc50ddf265</string>
 	<key>DATABASE_URL</key>
 	<string>https://tk8-dev.firebaseio.com</string>
 </dict>

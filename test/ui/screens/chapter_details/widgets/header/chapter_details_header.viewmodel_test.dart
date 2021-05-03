@@ -3,7 +3,6 @@ import 'package:mockito/mockito.dart';
 import 'package:tk8/ui/screens/chapter_details/chapter_details.viewmodel.dart';
 import 'package:tk8/ui/screens/chapter_details/widgets/header/chapter_details_header.viewmodel.dart';
 
-import '../../../../../_factories/chapters/chapter_item_model_factory.dart';
 import '../../../../../_factories/chapters/chapter_model_factory.dart';
 import '../../../../../_factories/video_model_factory.dart';
 

@@ -4,6 +4,7 @@
 
 - TK8-464: Dynamic links setup
 - TK8-473: Keyboard package replacement
+- TK8-385: Invitation-Wall / 2-Step Registration
 
 ## build 40
 

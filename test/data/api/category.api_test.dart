@@ -30,7 +30,7 @@ void main() {
   group('video categories api', () {
     test('should fetch video categories list', () async {
       // arrange
-      final uri = Uri.parse('https://heroku.t3k11.de/api/v1/categories');
+      final uri = Uri.parse('https://tk8-api.herokuapp.com/api/v1/categories');
       final categoriesJson = fixture('video_categories/list.json');
       final category = AcademyCategory.fromMap(
           json.decode(fixture('video_categories/video_category.json')));
@@ -79,7 +79,7 @@ void main() {
       // arrange
       const categoriId = '123';
       final uri = Uri.parse(
-          'https://heroku.t3k11.de/api/v1/categories/$categoriId/videos');
+          'https://tk8-api.herokuapp.com/api/v1/categories/$categoriId/videos');
       final videosJson = fixture('video_categories/videos_list.json');
       final video =
           VideoCategoryItem.fromMap(json.decode(fixture('videos/video.json')));
@@ -113,7 +113,7 @@ void main() {
       // arrange
       const categoryId = '123';
       final uri = Uri.parse(
-          'https://heroku.t3k11.de/api/v1/categories/$categoryId/chapters');
+          'https://tk8-api.herokuapp.com/api/v1/categories/$categoryId/chapters');
       final chaptersJson = fixture('video_categories/chapters_list.json');
       final chapter = ChapterCategoryItem.fromMap(
           json.decode(fixture('base_elements/chapter.json')));
@@ -147,7 +147,7 @@ void main() {
       // arrange
       const categoryId = '123';
       final uri = Uri.parse(
-          'https://heroku.t3k11.de/api/v1/categories/$categoryId/articles');
+          'https://tk8-api.herokuapp.com/api/v1/categories/$categoryId/articles');
       final articlesJson = fixture('video_categories/articles_list.json');
       final article = ArticleCategoryItem.fromMap(
           json.decode(fixture('base_elements/article.json')));

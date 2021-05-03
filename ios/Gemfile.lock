@@ -131,6 +131,7 @@ GEM
       xcpretty (~> 0.3.0)
       xcpretty-travis-formatter (>= 0.0.3)
     fastlane-plugin-appcenter (1.11.0)
+    fastlane-plugin-firebase_app_distribution (0.2.7)
     ffi (1.13.1)
     fourflusher (2.3.1)
     fuzzy_match (2.0.4)
@@ -242,6 +243,7 @@ DEPENDENCIES
   cocoapods
   fastlane
   fastlane-plugin-appcenter
+  fastlane-plugin-firebase_app_distribution
 
 BUNDLED WITH
    2.1.4

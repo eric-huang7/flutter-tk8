@@ -29,8 +29,7 @@ void setupServicesInjection() {
   getIt.registerLazySingleton(() => VideosService());
   getIt.registerLazySingleton(() => ChaptersTestsService());
   getIt.registerLazySingleton(() => MediaLibraryService());
-  getIt
-      .registerLazySingleton(() => DynamicLinksService()..handleDynamicLinks());
+  getIt.registerLazySingleton(() => DynamicLinksService());
   // data services
   getIt.registerLazySingleton(() => Api());
   getIt.registerLazySingleton(() => UserRepository());

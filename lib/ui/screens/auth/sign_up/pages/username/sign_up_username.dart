@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:tk8/config/styles.config.dart';
 import 'package:tk8/services/services.dart';
 import 'package:tk8/ui/alerts/alert_dialog.dart';
 import 'package:tk8/ui/screens/auth/common/widgets/auth_input_container.dart';
+import 'package:tk8/ui/screens/auth/common/widgets/field_container.dart';
+import 'package:tk8/ui/screens/auth/common/widgets/next_button.dart';
 import 'package:tk8/ui/widgets/text_anchor/flutter_text_anchor.dart';
 import 'package:tk8/ui/widgets/widgets.dart';
 
-import '../../../common/widgets/field_container.dart';
-import '../../../common/widgets/next_button.dart';
-import '../../sign_up.bloc.dart';
-import 'sign_up_username.bloc.dart';
+import '../../sign_up.viewmodel.dart';
+import 'sign_up_username.viewmodel.dart';
 
 class _PrivacyLinks {
   static const termsOfService = 'http://tos';
@@ -21,9 +21,9 @@ class _PrivacyLinks {
 class SignUpUsernamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final signUpState = context.watch<SignUpBloc>().state;
-    return BlocProvider(
-      create: (_) => SignUpUsernameBloc(signUpState.username),
+    final signUpViewModel = context.watch<SignUpViewModel>();
+    return ChangeNotifierProvider(
+      create: (_) => SignUpUsernameViewModel(signUpViewModel),
       child: SignUpUsernamePageView(),
     );
   }
@@ -42,13 +42,13 @@ class _SignUpUsernamePageViewState extends State<SignUpUsernamePageView> {
   void initState() {
     super.initState();
     _controller = TextEditingController(
-      text: context.read<SignUpBloc>().state.username,
+      text: context.read<SignUpUsernameViewModel>().username,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    final pageState = context.watch<SignUpUsernameBloc>().state;
+    final pageState = context.watch<SignUpUsernameViewModel>();
     return AuthFieldContainer(
       title: translate('screens.signUp.pages.username.field.label'),
       errorMessage: pageState.errorMessage ?? '',
@@ -77,9 +77,7 @@ class _SignUpUsernamePageViewState extends State<SignUpUsernamePageView> {
           AuthNextButton(
             title: translate('screens.signUp.actions.next.title'),
             onPressed: pageState.isUsernameValid && !pageState.checkingUsername
-                ? () {
-                    context.read<SignUpBloc>().setUserName(pageState.username);
-                  }
+                ? () => context.read<SignUpUsernameViewModel>().submitUsername()
                 : null,
           ),
         ],
@@ -103,11 +101,11 @@ class _SignUpUsernamePageViewState extends State<SignUpUsernamePageView> {
                 textInputAction: TextInputAction.next,
                 onEditingComplete: () {
                   if (pageState.isUsernameValid) {
-                    context.read<SignUpBloc>().setUserName(pageState.username);
+                    context.read<SignUpUsernameViewModel>().submitUsername();
                   }
                 },
                 onChanged: (value) {
-                  context.read<SignUpUsernameBloc>().upateUsername(value);
+                  context.read<SignUpUsernameViewModel>().updateUsername(value);
                 },
               ),
             ),

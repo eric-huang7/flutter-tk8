@@ -8,6 +8,117 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:3d9b7c98a88a6c82ddf265",
+        "android_client_info": {
+          "package_name": "com.kmc.tk8.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:40d6dbae0bed36a2ddf265",
+        "android_client_info": {
+          "package_name": "com.kmc.tk8.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239686247552:android:8920050b8991933bddf265",
+        "android_client_info": {
+          "package_name": "com.kmc.tk8.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_O4jueezJ-0gcM_YHQWMD5S-eaolUQyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239686247552-vlnk5pg09lukqf7810mkeum6bscj1e8p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:239686247552:android:004864aa32662617ddf265",
         "android_client_info": {
           "package_name": "com.njiuko.tk8.debug"
@@ -32,10 +143,11 @@
               "client_type": 3
             },
             {
-              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.njiuko.tk8.staging"
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
               }
             }
           ]
@@ -68,10 +180,11 @@
               "client_type": 3
             },
             {
-              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.njiuko.tk8.staging"
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
               }
             }
           ]
@@ -104,10 +217,11 @@
               "client_type": 3
             },
             {
-              "client_id": "239686247552-up8j4tggtectscojgbltch54j9v84jor.apps.googleusercontent.com",
+              "client_id": "239686247552-0vq28t7cd7plc5sb4lhsvlcrok5ocql9.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.njiuko.tk8.staging"
+                "bundle_id": "com.kmc.tk8.dev",
+                "app_store_id": "123456789"
               }
             }
           ]

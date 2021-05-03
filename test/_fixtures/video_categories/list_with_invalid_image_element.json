@@ -14,7 +14,7 @@
             "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
           },
           "links": {
-            "self": "https://heroku.t3k11.de/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
+            "self": "https://tk8-api.herokuapp.com/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
           }
         }
       ],
@@ -37,7 +37,7 @@
             "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
           },
           "links": {
-            "self": "https://heroku.t3k11.de/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
+            "self": "https://tk8-api.herokuapp.com/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
           }
         }
       ],
@@ -60,7 +60,7 @@
             "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
           },
           "links": {
-            "self": "https://heroku.t3k11.de/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
+            "self": "https://tk8-api.herokuapp.com/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
           }
         }
       ],
@@ -83,7 +83,7 @@
             "video_url": "https://cdn.kr8s.app/cap1-standard/TKA_DerMitDemBallTanzt_Trailer.mov"
           },
           "links": {
-            "self": "https://heroku.t3k11.de/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
+            "self": "https://tk8-api.herokuapp.com/api/v1/chapters/ccbb63c0-a8cd-47b7-8445-5d85e9c80977"
           }
         }
       ],

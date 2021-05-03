@@ -217,6 +217,7 @@ class NavigationService {
 }
 
 class _InitialRoute extends StatelessWidget {
+  final _linkingService = getIt<DynamicLinksService>();
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -224,10 +225,24 @@ class _InitialRoute extends StatelessWidget {
       child: Consumer<InitialRouteModel>(
         builder: (context, model, child) {
           switch (model.status) {
-            case AuthStatus.signedIn:
+            case AuthStatus.signedInActive:
               return MainScreen();
+            case AuthStatus.signedInInactive:
+              return StreamBuilder(
+                stream: _linkingService.invitationCodeStream,
+                builder: (context, AsyncSnapshot<String> snapshot) {
+                  return SignUpScreen(
+                    signUpMode: snapshot.data == null
+                        ? SignUpMode.waitingForInvitation
+                        : SignUpMode.activateAccount,
+                    invitationCode: snapshot.data,
+                  );
+                },
+              );
             case AuthStatus.signedOut:
-              return SignUpScreen();
+              return SignUpScreen(
+                signUpMode: SignUpMode.createAccount,
+              );
             case AuthStatus.unknown:
             default:
               return const Material(

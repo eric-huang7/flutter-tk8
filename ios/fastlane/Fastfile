@@ -68,15 +68,8 @@ platform :ios do
     # setup
     build_info = BUILD_INFO[build_type]
 
-    app_identifier = "com.njiuko.tk8.#{build_type}"
     scheme = build_info[:xcode_scheme]
     output_name = "tk8-#{build_type}-release"
-
-    # setup certificates
-    match(
-      type: "enterprise",
-      app_identifier: app_identifier,
-    )
 
     # build app
     build_flutter(
@@ -86,7 +79,10 @@ platform :ios do
       scheme: scheme,
       workspace: "./Runner.xcworkspace",
       output_directory: "./build",
-      output_name: output_name
+      output_name: output_name,
+      export_options: {
+        method: "ad-hoc"
+      }
     )
 
     # upload symbols for crashlytics
@@ -95,17 +91,14 @@ platform :ios do
       gsp_path: "./GoogleService-Info.plist"
     )
 
-    # upload to app center
+    # upload to firebase app distribution
     ipa_path = "./build/#{output_name}.ipa"
-    appcenter_upload(
-      api_token: "1b39cde45fc2d9587df839577ac50d00e6d0723b",
-      owner_name: "operations-dhbf",
-      app_name: build_info[:appcenter_name],
-      file: ipa_path,
+    firebase_app_distribution(
+      firebase_cli_token: '1//09GPpBfv7OeOvCgYIARAAGAkSNwF-L9Ir5q6SSUa9asVLmlFWAYqyPLITwrTZTOXwit3h042EY24OhzQzk66FcEPm0YRbwJKY8y4',
+      ipa_path: ipa_path,
       release_notes: RELEASE_NOTES,
-      notify_testers: true,
-      destinations: "*",
-      destination_type: "group"
+      groups: 'test-group',
+
     )
 
     # clean up
