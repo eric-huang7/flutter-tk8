@@ -18,7 +18,7 @@ class DynamicLinksService {
     // Link callback to fire if the app is opened up from the background
     // using a dynamic link.
     FirebaseDynamicLinks.instance.onLink(
-      onSuccess: _handleDeepLink,
+      onSuccess: (data) async => _handleDeepLink(data),
       onError: (OnLinkErrorException e) async {
         debugLogError('Dynamic Link Failed', e);
       },

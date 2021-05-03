@@ -1,5 +1,9 @@
 # Android
 
+## build <next>
+
+- TK8-485: Fix error on processing dynamic link
+
 ## build 42
 
 - TK8-464: Dynamic links setup
