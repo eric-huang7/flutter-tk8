@@ -1,8 +1,9 @@
 # Android
 
-## build <next>
+## build 43
 
 - TK8-485: Fix error on processing dynamic link
+- Revert api host changes
 
 ## build 42
 

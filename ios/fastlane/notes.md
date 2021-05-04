@@ -1,8 +1,9 @@
 # iOS
 
-## build <next>
+## build 42
 
 - TK8-485: Fix error on processing dynamic link
+- Revert api host changes
 
 ## build 41
 
