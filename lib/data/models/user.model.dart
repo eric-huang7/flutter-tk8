@@ -7,6 +7,7 @@ import 'image.model.dart';
 class User extends Equatable {
   final String id;
   final String username;
+  final String email;
   final DateTime birthdate;
   final Image profileImage;
   final Image backgroudImage;
@@ -16,6 +17,7 @@ class User extends Equatable {
     @required this.id,
     @required this.username,
     @required this.birthdate,
+    this.email,
     this.profileImage,
     this.backgroudImage,
     this.activated = false,
@@ -28,6 +30,7 @@ class User extends Equatable {
       return User._(
         id: map['id'],
         username: map['name'],
+        email: map['email'],
         birthdate: DateTime.tryParse(map['birthdate']),
         profileImage: Image.fromMap(map['profile_image']),
         backgroudImage: Image.fromMap(map['profile_background_image']),

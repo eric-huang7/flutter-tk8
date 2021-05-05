@@ -358,6 +358,10 @@
       },
       "settings": {
         "title": "EINSTELLUNGEN",
+        "changeEmail": {
+          "title": "E-mail adresse ändern",
+          "invalidEmail": "Ungültige E-mail adresse"
+        },      
         "termsAndConditions": "Geschäftsbedingungen",
         "dataPrivacy": "Datenschutz",
         "helpAndFAQ": "Hilfe & FAQ",

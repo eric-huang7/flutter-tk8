@@ -36,7 +36,7 @@ class EditProfileBloc extends Cubit<EditProfileState> {
       emit(state.copyWith(isBusy: true));
       if (isProfileChanged) {
         try {
-          await _userRepository.updateUser(usernmame: state.username.value);
+          await _userRepository.updateUser(username: state.username.value);
         } catch (e) {
           emit(state.copyWith(isBusy: false));
           if (e is UserRepositoryException &&

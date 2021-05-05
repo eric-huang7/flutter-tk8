@@ -19,6 +19,10 @@ class ProfileSettingsViewModel extends ChangeNotifier {
     _navigator.openWebViewScreen(url, title);
   }
 
+  void openChangeEmailScreen() {
+    _navigator.openChangeEmail();
+  }
+
   void _fetchPackageInfo() {
     PackageInfo.fromPlatform().then((value) {
       packageInfo = value;
@@ -40,6 +44,6 @@ class ProfileSettingsViewModel extends ChangeNotifier {
   }
 
   void logOut() {
-    _auth.signOut().then((value) =>_navigator.popBackUntil(AppRoutes.root));
+    _auth.signOut().then((value) => _navigator.popBackUntil(AppRoutes.root));
   }
 }

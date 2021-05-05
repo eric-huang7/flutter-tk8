@@ -146,6 +146,10 @@ class NavigationService {
     _rootNavigatorKey.currentState.pushNamed(AppRoutes.profileSettings);
   }
 
+  void openChangeEmail() {
+    _rootNavigatorKey.currentState.pushNamed(AppRoutes.changeEmail);
+  }
+
   void openVideosOverview(AcademyCategory category) {
     _rootNavigatorKey.currentState
         .pushNamed(AppRoutes.videosOverview, arguments: category);

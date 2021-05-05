@@ -1,5 +1,10 @@
 # iOS
 
+## build <next>
+
+- TK8-467: Settings screen
+- TK8-457: Change email
+
 ## build 42
 
 - TK8-485: Fix error on processing dynamic link

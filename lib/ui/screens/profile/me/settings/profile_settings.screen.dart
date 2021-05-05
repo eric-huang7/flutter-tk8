@@ -43,6 +43,15 @@ class _ProfileSettingsScreenView extends StatelessWidget {
                   children: [
                     const SizedBox(height: 20),
                     _buildSettingsItem(
+                      label: translate('screens.myProfile.settings.changeEmail.title'),
+                      firstSectionItem: true,
+                      lastSectionItem: true,
+                      onPressed: () {
+                        model.openChangeEmailScreen();
+                      },
+                    ),
+                    _buildEmptySpace(),
+                    _buildSettingsItem(
                       label: translate('screens.myProfile.settings.termsAndConditions'),
                       firstSectionItem: true,
                       onPressed: () {

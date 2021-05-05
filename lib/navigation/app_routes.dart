@@ -15,6 +15,7 @@ class AppRoutes {
 
   static const editUserProfile = '/editUserProfile';
   static const profileSettings = '/profileSettings';
+  static const changeEmail = '/changeEmail';
 
   static const articlesOverview = '/articlesOverview';
   static const articleDetails = '/articleDetails';

@@ -122,7 +122,7 @@ void main() {
           },
           verify: (cubit) {
             verify(userRepositoryMock.myProfileUser);
-            verify(userRepositoryMock.updateUser(usernmame: 'new_name'));
+            verify(userRepositoryMock.updateUser(username: 'new_name'));
             verifyNoMoreInteractions(userRepositoryMock);
           },
           expect: [

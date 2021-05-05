@@ -132,10 +132,29 @@ class UserRepository {
     return user;
   }
 
-  Future<User> updateUser({String usernmame}) async {
+  Future<User> updateUser({String username}) async {
     try {
       final body = {
-        'user': {'name': usernmame}
+        'user': {'name': username}
+      };
+      await _api.put(path: 'me', body: body);
+      return await loadMyProfile();
+    } on ApiException catch (e) {
+      if (e.statusCode == 422) {
+        throw UserRepositoryException(
+          error: UserRepositoryError.invalidUserData,
+        );
+      }
+      throw UserRepositoryException();
+    } catch (e) {
+      throw UserRepositoryException();
+    }
+  }
+
+  Future<User> updateUserEmail({String email}) async {
+    try {
+      final body = {
+        'user': {'email': email}
       };
       await _api.put(path: 'me', body: body);
       return await loadMyProfile();

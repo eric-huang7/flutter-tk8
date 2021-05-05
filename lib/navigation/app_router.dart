@@ -21,6 +21,7 @@ import 'package:tk8/ui/screens/exercise/feedback/exercise_feedback.screen.dart';
 import 'package:tk8/ui/screens/exercise/overview/exercise_overview.screen.dart';
 import 'package:tk8/ui/screens/exercise/stopwatch/exercise_host.screen.dart';
 import 'package:tk8/ui/screens/profile/me/edit/edit_profile.screen.dart';
+import 'package:tk8/ui/screens/profile/me/settings/change_email/change_email.screen.dart';
 import 'package:tk8/ui/screens/profile/me/settings/profile_settings.screen.dart';
 import 'package:tk8/ui/screens/videos_overview/videos_overview.screen.dart';
 import 'package:tk8/ui/screens/webview/webview.screen.dart';
@@ -83,6 +84,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => EditProfileScreen());
       case AppRoutes.profileSettings:
         return MaterialPageRoute(builder: (_) => ProfileSettingsScreen());
+      case AppRoutes.changeEmail:
+        return MaterialPageRoute(builder: (_) => ChangeEmailScreen());
 
       // Articles
       case AppRoutes.articlesOverview:
