@@ -105,16 +105,45 @@ platform :ios do
     clean_build_artifacts
   end
 
-  desc "Upload a new Development build to AppCenter"
+  desc "Upload a new Development build to firebase"
   lane :development do
     increment_build_number
     do_build(build_type: :dev)
     commit_new_build_number
   end
 
-  desc "Upload a new Staging build to AppCenter"
+  desc "Upload a new Staging build to firebase"
   lane :staging do
     do_build(build_type: :staging)
+  end
+
+  desc "Upload new build to testfligh"
+  lane :testflight_app do
+    # build app
+    build_flutter(
+      flavor: :store,
+    )
+
+    build_app(
+      scheme: "store",
+      workspace: "./Runner.xcworkspace",
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: {
+          "com.kmc.tk8" => "TK Academy Testflight Distribution"
+        }
+      }
+    )
+
+    # upload to testflight
+    pilot(
+      skip_waiting_for_build_processing: true,
+      app_identifier: "com.kmc.tk8",
+      team_id: "118082940"
+    )
+
+    # clean up
+    clean_build_artifacts
   end
 
   desc "Update debug push notification certificate"

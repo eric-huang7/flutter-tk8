@@ -20,12 +20,17 @@ or alternatively using `brew install fastlane`
 ```
 fastlane ios development
 ```
-Upload a new Development build to AppCenter
+Upload a new Development build to firebase
 ### ios staging
 ```
 fastlane ios staging
 ```
-Upload a new Staging build to AppCenter
+Upload a new Staging build to firebase
+### ios testflight_app
+```
+fastlane ios testflight_app
+```
+Upload new build to testfligh
 ### ios generate_push_debug_app
 ```
 fastlane ios generate_push_debug_app

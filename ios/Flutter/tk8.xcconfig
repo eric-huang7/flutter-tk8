@@ -1,4 +1,3 @@
 #include "Generated.xcconfig"
 APP_ID=com.kmc.tk8
-APP_VERSION=1.0.0
 APP_NAME=TK8
