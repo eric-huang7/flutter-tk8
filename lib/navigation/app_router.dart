@@ -8,6 +8,7 @@ import 'package:tk8/navigation/community_video_player_stream.arguments.dart';
 import 'package:tk8/navigation/exercise_done.arguments.dart';
 import 'package:tk8/navigation/exercise_feedback.arguments.dart';
 import 'package:tk8/navigation/exercise_overview.arguments.dart';
+import 'package:tk8/navigation/webview.arguments.dart';
 import 'package:tk8/ui/screens/article_details/article_details.screen.dart';
 import 'package:tk8/ui/screens/articles_overview/articles_overview.screen.dart';
 import 'package:tk8/ui/screens/auth/login/login.screen.dart';
@@ -20,7 +21,9 @@ import 'package:tk8/ui/screens/exercise/feedback/exercise_feedback.screen.dart';
 import 'package:tk8/ui/screens/exercise/overview/exercise_overview.screen.dart';
 import 'package:tk8/ui/screens/exercise/stopwatch/exercise_host.screen.dart';
 import 'package:tk8/ui/screens/profile/me/edit/edit_profile.screen.dart';
+import 'package:tk8/ui/screens/profile/me/settings/profile_settings.screen.dart';
 import 'package:tk8/ui/screens/videos_overview/videos_overview.screen.dart';
+import 'package:tk8/ui/screens/webview/webview.screen.dart';
 
 import 'exercise_arguments.dart';
 
@@ -35,6 +38,14 @@ class AppRouter {
           settings: routeSettings,
           builder: (_) => LoginScreen(),
         );
+      
+      // WebView
+      case AppRoutes.webView:
+        final WebViewArguments webViewArguments = arguments;
+        return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => WebViewScreen(url: webViewArguments.url, title: webViewArguments.title),);
+
       // Chapter
       case AppRoutes.chapterOverview:
         final AcademyCategory category = arguments;
@@ -70,6 +81,8 @@ class AppRouter {
       // Profile
       case AppRoutes.editUserProfile:
         return MaterialPageRoute(builder: (_) => EditProfileScreen());
+      case AppRoutes.profileSettings:
+        return MaterialPageRoute(builder: (_) => ProfileSettingsScreen());
 
       // Articles
       case AppRoutes.articlesOverview:

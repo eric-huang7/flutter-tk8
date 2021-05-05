@@ -14,6 +14,7 @@ class AppRoutes {
   static const videosOverview = '/videosOverview';
 
   static const editUserProfile = '/editUserProfile';
+  static const profileSettings = '/profileSettings';
 
   static const articlesOverview = '/articlesOverview';
   static const articleDetails = '/articleDetails';

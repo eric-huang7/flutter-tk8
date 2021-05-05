@@ -142,6 +142,10 @@ class NavigationService {
     _rootNavigatorKey.currentState.pushNamed(AppRoutes.editUserProfile);
   }
 
+  void openProfileSettings() {
+    _rootNavigatorKey.currentState.pushNamed(AppRoutes.profileSettings);
+  }
+
   void openVideosOverview(AcademyCategory category) {
     _rootNavigatorKey.currentState
         .pushNamed(AppRoutes.videosOverview, arguments: category);

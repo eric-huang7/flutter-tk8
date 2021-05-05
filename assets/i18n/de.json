@@ -355,6 +355,13 @@
             "label": "Geburtsdatum"
           }
         }
+      },
+      "settings": {
+        "title": "EINSTELLUNGEN",
+        "termsAndConditions": "Geschäftsbedingungen",
+        "dataPrivacy": "Datenschutz",
+        "helpAndFAQ": "Hilfe & FAQ",
+        "logout": "Ausloggen"
       }
     },
     "webview": {

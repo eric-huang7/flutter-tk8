@@ -73,6 +73,10 @@ class MyProfileBloc extends Cubit<MyProfileState> {
     _navigator.openEditUserProfile();
   }
 
+  void openProfileSettings() {
+    _navigator.openProfileSettings();
+  }
+
   void _updateStateWithUser(User user) {
     if (user == null) {
       emit(const MyProfileState.initial());

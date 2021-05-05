@@ -156,7 +156,11 @@ class MyProfileHeader extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const SizedBox(width: 44),
+              SvgIconButton(
+                onPressed: () => context.read<MyProfileBloc>().editProfile(),
+                iconFileName: 'iconEdit',
+                iconColor: Colors.white,
+              ),
               Text(
                 translate('screens.myProfile.view.header.title'),
                 style: const TextStyle(
@@ -168,8 +172,8 @@ class MyProfileHeader extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SvgIconButton(
-                onPressed: () => context.read<MyProfileBloc>().editProfile(),
-                iconFileName: 'iconEdit',
+                onPressed: () => context.read<MyProfileBloc>().openProfileSettings(),
+                iconFileName: 'iconSettings',
                 iconColor: Colors.white,
               ),
             ],
