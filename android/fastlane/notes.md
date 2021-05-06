@@ -4,6 +4,7 @@
 
 - TK8-467: Settings screen
 - TK8-457: Change email
+- TK8-463: Disable birthdate skipping
 - TK8-426: Wrong username submitted
 
 ## build 43

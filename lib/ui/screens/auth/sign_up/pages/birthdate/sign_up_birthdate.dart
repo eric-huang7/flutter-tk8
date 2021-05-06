@@ -1,12 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:tk8/ui/screens/auth/common/widgets/next_button.dart';
 
 import '../../../common/widgets/field_container.dart';
 import '../../../sign_up/sign_up.viewmodel.dart';
 import 'sign_up_birthdate.viewmodel.dart';
+
+const _minimumUserAge = 6;
+const _maximumAllowedUserAge = 50;
 
 class SignUpBirthdatePage extends StatelessWidget {
   @override
@@ -26,6 +31,13 @@ class SignUpBirthdatePageView extends StatefulWidget {
 }
 
 class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
+  final lastAvailableDate = DateTime(DateTime.now().year - _minimumUserAge,
+      DateTime.now().month, DateTime.now().day);
+  final firstAvailableDate = DateTime(
+      DateTime.now().year - _maximumAllowedUserAge,
+      DateTime.now().month,
+      DateTime.now().day);
+
   @override
   void initState() {
     super.initState();
@@ -40,11 +52,8 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
     final pageState = context.watch<SignUpBirthdateViewModel>();
     return AuthFieldContainer(
       title: translate('screens.signUp.pages.birthdate.field.label'),
-      buttonTitle: translate('screens.signUp.actions.next.title'),
-      onActionPressed: () {
-        context.read<SignUpBirthdateViewModel>().submit();
-      },
       errorMessage: pageState.errorMessage,
+      customActionsArea: _buildNextButton(),
       child: GestureDetector(
         onTap: () async => _selectDate(context),
         child: Container(
@@ -78,20 +87,87 @@ class _SignUpBirthdatePageViewState extends State<SignUpBirthdatePageView> {
     );
   }
 
+  Widget _buildNextButton() {
+    return Consumer<SignUpBirthdateViewModel>(
+        builder: (context, model, child) => Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                AuthNextButton(
+                  title: translate('screens.signUp.actions.next.title'),
+                  onPressed: model.isBirthdateValid
+                      ? () => context.read<SignUpBirthdateViewModel>().submit()
+                      : null,
+                )
+              ],
+            ));
+  }
+
   Future<void> _selectDate(BuildContext context) async {
+    final ThemeData theme = Theme.of(context);
+    if (theme.platform == TargetPlatform.iOS) {
+      return showCupertinoPicker(context,
+          firstDate: firstAvailableDate, lastDate: lastAvailableDate);
+    } else {
+      return showMaterialPicker(context,
+          firstDate: firstAvailableDate, lastDate: lastAvailableDate);
+    }
+  }
+
+  Future<void> showMaterialPicker(BuildContext context,
+      {DateTime firstDate, DateTime lastDate}) async {
     final model = context.read<SignUpBirthdateViewModel>();
-    final picked = await showDatePicker(
+    final DateTime pickedDate = await showDatePicker(
       context: context,
-      initialDate: model.birthdate ?? DateTime.now(),
-      firstDate: DateTime(1900),
-      lastDate: DateTime.now(),
+      initialDate: model.birthdate ?? lastDate,
+      firstDate: firstDate,
+      lastDate: lastDate,
       fieldLabelText:
           translate('screens.signUp.pages.birthdate.datePicker.label'),
       helpText:
           translate('screens.signUp.pages.birthdate.datePicker.helperText'),
     );
-    if (picked != null && picked != model.birthdate) {
-      model.updateBirthdate(picked);
+    if (pickedDate != null && pickedDate != model.birthdate) {
+      model.updateBirthdate(pickedDate);
     }
+  }
+
+  Future<void> showCupertinoPicker(BuildContext context,
+      {DateTime firstDate, DateTime lastDate}) async {
+    final model = context.read<SignUpBirthdateViewModel>();
+    await showCupertinoModalPopup(
+        context: context,
+        builder: (context) {
+          return Container(
+            height: MediaQuery.of(context).copyWith().size.height / 3,
+            color: Theme.of(context).scaffoldBackgroundColor,
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: CupertinoButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Text(
+                      translate('alerts.actions.confirm.title'),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: CupertinoDatePicker(
+                      mode: CupertinoDatePickerMode.date,
+                      onDateTimeChanged: (pickedDate) {
+                        if (pickedDate != null &&
+                            pickedDate != model.birthdate) {
+                          model.updateBirthdate(pickedDate);
+                        }
+                      },
+                      initialDateTime: model.birthdate ?? lastDate,
+                      minimumDate: firstDate,
+                      maximumDate: lastDate),
+                ),
+                const SizedBox(height: 24)
+              ],
+            ),
+          );
+        });
   }
 }

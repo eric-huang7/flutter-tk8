@@ -12,6 +12,9 @@
       },
       "retry": {
         "title": "Retry"
+      },
+      "confirm": {
+        "title": "Confirm"
       }
     },
     "genericError": {
