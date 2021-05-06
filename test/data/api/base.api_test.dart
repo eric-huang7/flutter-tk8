@@ -15,7 +15,7 @@ void main() {
       // arrange
       final mockClient = mockApiClientWithResponse(body: '{"data":{}}');
       final api = Api(mockClient);
-      final uri = Uri.parse('https://tk8-api.herokuapp.com/api/v1/test');
+      final uri = Uri.parse('https://heroku.t3k11.de/api/v1/test');
 
       // act
       await api.get(path: 'test');

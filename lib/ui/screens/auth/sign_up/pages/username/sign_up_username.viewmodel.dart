@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:tk8/services/services.dart';
 
 import '../../sign_up.viewmodel.dart';
@@ -9,6 +10,7 @@ class SignUpUsernameViewModel extends ChangeNotifier {
   final _navigator = getIt<NavigationService>();
 
   final SignUpViewModel signUpViewModel;
+  final _validateUsernameSubject = BehaviorSubject<String>();
   String _username;
   String _errorMessage;
   bool _isUsernameValid;
@@ -22,9 +24,31 @@ class SignUpUsernameViewModel extends ChangeNotifier {
   SignUpUsernameViewModel(this.signUpViewModel) {
     _username = signUpViewModel.username;
     _isUsernameValid = username?.isNotEmpty ?? false;
+
+    _validateUsernameSubject
+        .debounceTime(const Duration(milliseconds: 500))
+        .distinct()
+        .listen(validateUsernameListener);
+  }
+
+  @override
+  void dispose() {
+    _validateUsernameSubject.close();
+    super.dispose();
   }
 
   Future<void> updateUsername(String value) async {
+    _checkingUsername = true;
+    notifyListeners();
+    _validateUsernameSubject.add(value);
+  }
+
+  void submitUsername() {
+    signUpViewModel.setUserName(_username);
+  }
+
+  @visibleForTesting
+  Future<void> validateUsernameListener(String value) async {
     if (value == null || value.isEmpty) {
       _username = '';
       _isUsernameValid = false;
@@ -55,9 +79,5 @@ class SignUpUsernameViewModel extends ChangeNotifier {
       notifyListeners();
       _navigator.showGenericErrorAlertDialog();
     }
-  }
-
-  void submitUsername() {
-    signUpViewModel.setUserName(_username);
   }
 }

@@ -51,14 +51,13 @@ void main() {
         expect(model.isUsernameValid, isFalse);
       });
     });
-    group('updateUsername', () {
+    group('validateUsernameListener', () {
       test('should set username invalid when empty username string is given',
           () async {
         // arrange
-
         final model = SignUpUsernameViewModel(signUpViewModelMock);
         // act
-        model.updateUsername('');
+        model.validateUsernameListener('');
         // assert
         expect(model.username, '');
         expect(model.errorMessage, 'screens.signUp.errors.invalidUsername');
@@ -73,7 +72,7 @@ void main() {
         // arrange
         final model = SignUpUsernameViewModel(signUpViewModelMock);
         // act
-        await model.updateUsername(username);
+        await model.validateUsernameListener(username);
         // assert
         verify(userRepositoryMock.validateUsername(username));
         verifyNoMoreInteractions(userRepositoryMock);
@@ -84,7 +83,7 @@ void main() {
         when(userRepositoryMock.validateUsername(any)).thenThrow(Exception());
         final model = SignUpUsernameViewModel(signUpViewModelMock);
         // act
-        await model.updateUsername(username);
+        await model.validateUsernameListener(username);
         // assert
         expect(model.isUsernameValid, isFalse);
         expect(model.checkingUsername, isFalse);
@@ -98,7 +97,7 @@ void main() {
             .thenAnswer((_) async => UsernameValidationResult.invalidUsername);
         final model = SignUpUsernameViewModel(signUpViewModelMock);
         // act
-        await model.updateUsername(username);
+        await model.validateUsernameListener(username);
         // assert
         expect(model.isUsernameValid, isFalse);
         expect(model.checkingUsername, isFalse);
@@ -111,7 +110,7 @@ void main() {
             .thenAnswer((_) async => UsernameValidationResult.ok);
         final model = SignUpUsernameViewModel(signUpViewModelMock);
         // act
-        await model.updateUsername(username);
+        await model.validateUsernameListener(username);
         // assert
         expect(model.username, username);
         expect(model.isUsernameValid, isTrue);
